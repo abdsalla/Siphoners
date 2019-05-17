@@ -29,7 +29,11 @@ The following packages were added:
 The following packages were updated:
   com.unity.package-manager-ui from version 2.1.2 to 2.2.0
 
+<<<<<<< HEAD
 === Fri May 17 15:25:26 2019
+=======
+=== Fri May 17 16:01:27 2019
+>>>>>>> Main_Menu
 
 Packages were changed.
 Update Mode: resetToDefaultDependencies
