@@ -17,11 +17,13 @@ public class SceneLoader : MonoBehaviour
     }
     public void Quit()
     {
+        Debug.Log("Saving and Quitting.");
+
         //Quit in build
         Application.Quit();
 
         //Quit in editor
-#if UNITY_ANDROID
+#if UNITY_EDITOR
     UnityEditor.EditorApplication.isPlaying = false;
 #endif
 
