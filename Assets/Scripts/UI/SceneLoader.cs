@@ -1,18 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    const int MENU_INDEX = 0;       //The Menu Scene Index
+    const int HUB_WORLD_INDEX = 1;   //The Hub World Scene Index
+
+    public void RunMenu()
     {
-        
+        SceneManager.LoadScene(MENU_INDEX);
+    }
+    public void RunHubWorld()
+    {
+        SceneManager.LoadScene(HUB_WORLD_INDEX);
+    }
+    public void Quit()
+    {
+        //Quit in build
+        Application.Quit();
+
+        //Quit in editor
+#if UNITY_ANDROID
+    UnityEditor.EditorApplication.isPlaying = false;
+#endif
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
