@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpMultiplier;
     [SerializeField] private KeyCode jumpKey;
 
+    public float rotationSpeed;
     private bool isJumping;
 
    
@@ -33,10 +34,24 @@ public class PlayerMovement : MonoBehaviour
         float horizInput = Input.GetAxis(horizontalInputName) * movementSpeed;
         float vertInput = Input.GetAxis(verticalInputName) * movementSpeed;
 
+
         Vector3 forwardMovement = transform.forward * vertInput;
         Vector3 rightMovement = transform.right * horizInput;
 
         charController.SimpleMove(forwardMovement + rightMovement);
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            // Move Right
+            Vector3 vectorRotation = Vector3.up * rotationSpeed * Time.deltaTime;
+            //motor.rotate(vectorRotation);
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            // Move Left
+            Vector3 vectorRotation = Vector3.up * rotationSpeed * Time.deltaTime;
+            //motor.rotate(-vectorRotation);
+        }
 
         JumpInput();
     }
