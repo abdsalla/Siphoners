@@ -52,4 +52,9 @@ public class PlayerLook : MonoBehaviour
         eulerRotation.x = value;
         transform.eulerAngles = eulerRotation;
     }
+
+    private void OnDestroy()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
 }
