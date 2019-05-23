@@ -37,3 +37,4 @@ sysinfo.txt
 
 # Whitelisted files
 !Siphoners/ProjectSettings/EditorBuildSettings.asset
+Library/
