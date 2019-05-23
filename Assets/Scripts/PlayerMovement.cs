@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//Temp
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+
     [SerializeField] private string horizontalInputName;
     [SerializeField] private string verticalInputName;
     [SerializeField] private float movementSpeed;
@@ -26,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.P)) { SceneManager.LoadScene(0); }
         PlayerMove();
     }
 
