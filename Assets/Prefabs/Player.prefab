@@ -173,15 +173,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -537305531438391245, guid: 3d8afb291053b4843b77daeb80d339de,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.144
-      objectReference: {fileID: 0}
     - target: {fileID: 1349368970495377199, guid: 3d8afb291053b4843b77daeb80d339de,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 2.876
+      objectReference: {fileID: 0}
+    - target: {fileID: -537305531438391245, guid: 3d8afb291053b4843b77daeb80d339de,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.144
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d8afb291053b4843b77daeb80d339de, type: 3}
@@ -197,3 +197,72 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 342707102806035498}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2508582550273367476
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4736448177641121584}
+    m_Modifications:
+    - target: {fileID: -927199367670048503, guid: 8bda38845dab50247af7534e357dddda,
+        type: 3}
+      propertyPath: m_Name
+      value: Weapon_Melee_StraightSword
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 8bda38845dab50247af7534e357dddda,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.2689972
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 8bda38845dab50247af7534e357dddda,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.16255
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 8bda38845dab50247af7534e357dddda,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.268
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 8bda38845dab50247af7534e357dddda,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.100124754
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 8bda38845dab50247af7534e357dddda,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.067067355
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 8bda38845dab50247af7534e357dddda,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.15337338
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 8bda38845dab50247af7534e357dddda,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9807924
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 8bda38845dab50247af7534e357dddda,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 8bda38845dab50247af7534e357dddda,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 12.531
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 8bda38845dab50247af7534e357dddda,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 5.9300003
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 8bda38845dab50247af7534e357dddda,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -17.124
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8bda38845dab50247af7534e357dddda, type: 3}
