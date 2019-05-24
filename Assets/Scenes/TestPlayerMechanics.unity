@@ -475,5 +475,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 342707103206649463, guid: 8bfaa1ac98bb3a24a81398e6a79466a1,
+        type: 3}
+      propertyPath: activelayer.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 342707103206649463, guid: 8bfaa1ac98bb3a24a81398e6a79466a1,
+        type: 3}
+      propertyPath: activeLayer.m_Bits
+      value: 55
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bfaa1ac98bb3a24a81398e6a79466a1, type: 3}
+--- !u!1 &342707102507286746 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8638017735412847907, guid: 8bfaa1ac98bb3a24a81398e6a79466a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 342707102507286745}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &342707102507286747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342707102507286746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c0093c303b458b429d1fd853bf7e836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRayDist: 3
+  activeLayer:
+    serializedVersion: 2
+    m_Bits: 256
