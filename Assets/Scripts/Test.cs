@@ -6,7 +6,7 @@ public class Test : MonoBehaviour
 {
 
     [SerializeField]
-    private Transform target;
+    public Transform target;
 
     [SerializeField]
     private Vector3 offsetPosition;
