@@ -243,7 +243,7 @@ MonoBehaviour:
   m_MinSize: {x: 336, y: 272}
   m_MaxSize: {x: 14006, y: 10022}
   vertical: 0
-  controlID: 128
+  controlID: 86
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -436,9 +436,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 6e300000
+      m_SelectedIDs: 48f00000
       m_LastClickedID: 0
-      m_ExpandedIDs: a2a6ffffa4a7ffffa6a7ffff46afffffa6b0ffffa8b0ffff
+      m_ExpandedIDs: 46aaffff4aaeffff8eafffff54b5ffff30beffffcac8ffff64470000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -498,9 +498,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.1472702, y: 3.5224872, z: 0.5969473}
+    m_Target: {x: -37.29117, y: 17.082151, z: -10.994843}
     speed: 2
-    m_Value: {x: 1.1472702, y: 3.5224872, z: 0.5969473}
+    m_Value: {x: -37.29117, y: 17.082151, z: -10.994843}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -529,13 +529,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.08522692, y: 0.67873496, z: -0.079769865, w: 0.72505367}
+    m_Target: {x: 0.12288902, y: 0.46334213, z: -0.065058805, w: 0.8752039}
     speed: 2
-    m_Value: {x: 0.08522647, y: 0.6787313, z: -0.07976944, w: 0.7250498}
+    m_Value: {x: 0.122888885, y: 0.46334162, z: -0.06505874, w: 0.87520295}
   m_Size:
-    m_Target: 21.01
+    m_Target: 33.142143
     speed: 2
-    m_Value: 21.01
+    m_Value: 33.142143
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -688,20 +688,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Glory\Unity\Siphoners\Siphoners
+  m_LastProjectPath: D:\Unity 2019\SiphonersRepo\Siphoners
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1e2d0000
-    m_LastClickedID: 11550
-    m_ExpandedIDs: 000000001e2d0000e232000000ca9a3b
+    m_SelectedIDs: 543d0000
+    m_LastClickedID: 15700
+    m_ExpandedIDs: 000000009a3a0000543d0000f83e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -729,7 +729,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001e2d00005e350000
+    m_ExpandedIDs: 000000009a3a0000f83e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -908,7 +908,7 @@ MonoBehaviour:
   m_PosLeft: {x: 0, y: 0}
   m_PosRight: {x: 0, y: 0}
   m_Scope: 1
-  m_SplitterFlex: 0.2
+  m_SplitterFlex: 0
 --- !u!114 &24
 MonoBehaviour:
   m_ObjectHideFlags: 52
