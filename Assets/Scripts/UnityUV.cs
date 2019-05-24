@@ -59,6 +59,8 @@ public class UnityUV : MonoBehaviour, IUVSensor
     void Update()
     {
         GetUV();
+
+        // set text to UV sensor value for debug mode
         if (textBox != null && debug == true) 
         {
             textBox.text = "" + GetUVValue();

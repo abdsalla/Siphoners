@@ -56,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
         JumpInput();
     }
 
+    // Find available cover for player to snap to (having it return a bool identifies if cover is available).
     private bool FindCover()
     {
 
@@ -97,7 +98,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        // Player press P to quit out the Main Menu
         if (Input.GetKeyDown(KeyCode.P)) { SceneManager.LoadScene(0); }
+
         PlayerMove();
         FindCover();
         

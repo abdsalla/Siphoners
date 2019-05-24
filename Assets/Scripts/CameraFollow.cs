@@ -9,14 +9,14 @@ public class CameraFollow : MonoBehaviour
 
     private Transform tf;
 
-    // Use this for initialization
+    
     void Start()
     {
         tf = GetComponent<Transform>();
 
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         //new postition of the camera is players(targetobject) position plus designer set offset.
