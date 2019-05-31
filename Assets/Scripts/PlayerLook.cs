@@ -16,6 +16,8 @@ public class PlayerLook : MonoBehaviour
         LockCursor();
         xAxisClamp = 0.0f;
     }
+
+    // Locks mouse in the middle of the screen
     private void LockCursor()
     {
         Cursor.lockState = CursorLockMode.Locked;
