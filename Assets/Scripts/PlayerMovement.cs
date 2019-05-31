@@ -19,9 +19,12 @@ public class PlayerMovement : MonoBehaviour
 
     public float rotationSpeed;
     private bool isJumping;
-    public Vector3 rightMovement;
-    public Vector3 forwardMovement;
-    private bool aCover = false;
+    public RaycastHit hit;
+    private Vector3 rightMovement;
+    private Vector3 forwardMovement;
+    private Vector3 leftMovement;
+    private Vector3 backMovement;
+    public bool aCover = false;
     public float maxRayDist = 3;
     public LayerMask activeLayer = 8;
     
@@ -36,9 +39,7 @@ public class PlayerMovement : MonoBehaviour
         forwardMovement = transform.forward * vertInput;
         rightMovement = transform.right * horizInput;
 
-
-
-        charController.SimpleMove(forwardMovement + rightMovement);
+      
 
         if (Input.GetKeyDown(KeyCode.D))
         {
@@ -51,7 +52,41 @@ public class PlayerMovement : MonoBehaviour
             // Move Left
             Vector3 vectorRotation = Vector3.up * rotationSpeed * Time.deltaTime;
             //motor.rotate(-vectorRotation);
-        }   
+        }
+        // Move Right along object
+        if (aCover == true && Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.J))
+        { 
+            // Vector3 of what was perpendicular of what was hit
+            Vector3 surfaceNormalAtHit = hit.normal;
+            // Vector3 right of this script object
+            Vector3 perpVector = transform.right;
+            // changing the right of the script object to be perpendicular of the surface normal
+            Vector3.OrthoNormalize(ref surfaceNormalAtHit, ref perpVector);
+            // use character controller to move in that direction
+            charController.SimpleMove(perpVector * movementSpeed);
+            Debug.DrawRay(transform.position, perpVector, Color.magenta);
+
+        }
+        else
+        {
+            charController.SimpleMove(forwardMovement + rightMovement);
+        }
+
+        // Move Left along object
+        if (aCover == true && Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.J))
+        {
+            // Vector3 of what was perpendicular of what was hit
+            Vector3 surfaceNormalAtHit = hit.normal;
+            // Vector3 right of this script object
+            Vector3 perpVector = transform.right;
+            // changing the right of the script object to be perpendicular of the surface normal
+            Vector3.OrthoNormalize(ref surfaceNormalAtHit, ref perpVector);
+            // use character controller to move in that direction
+            charController.SimpleMove(perpVector * -movementSpeed);
+            Debug.DrawRay(transform.position, perpVector, Color.magenta);
+
+        }
+
 
         JumpInput();
     }
@@ -62,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Ray ray = new Ray(this.transform.position + new Vector3(0f, 3.70f, 0f), forward);
-        RaycastHit hit;
+        
         Physics.Raycast(ray, maxRayDist, activeLayer);
         Debug.DrawRay(transform.position + new Vector3(0f, 3.70f, 0f), forward, Color.red);
 
@@ -73,14 +108,15 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.J) && aCover == true)
             {
                 Debug.Log("Available Cover");
-                Vector3 normal = hit.normal;
+                
+                /*Vector3 normal = hit.normal;
                 Vector3.OrthoNormalize(ref normal, ref rightMovement);
                 charController.Move(rightMovement * Time.deltaTime);
                 Vector3.OrthoNormalize(ref normal, ref forwardMovement);
-                charController.Move(forwardMovement * Time.deltaTime);
+                charController.Move(forwardMovement * Time.deltaTime);*/
             }
         }
-        
+        else
         {
             aCover = false;
         }
