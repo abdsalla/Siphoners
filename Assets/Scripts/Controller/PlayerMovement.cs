@@ -6,13 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private CharacterController controller;
     [Header("Move Inputs")]
     [SerializeField]
     private string horizontalInputName;
     [SerializeField]
     private string verticalInputName;
     [SerializeField]
-    private float movementSpeed;
+    public float Speed;
+    public float RotateSpeed;
 
     public CharacterController charController;
      
@@ -32,37 +34,26 @@ public class PlayerMovement : MonoBehaviour
     private bool aCover = false;
     public float maxRayDist = 3;
     public LayerMask activeLayer = 8;
+
+    public static Vector3 playerPos;
     
 
 
 
     public void PlayerMove()
     {
-        float horizInput = Input.GetAxis(horizontalInputName) * movementSpeed; //sets input and times it by a set speed
-        float vertInput = Input.GetAxis(verticalInputName) * movementSpeed; //sets input and times it by a set speed
-
-        forwardMovement = transform.forward * vertInput; //forward movement 
-        rightMovement = transform.right * horizInput; //right movement 
-
-
-
-        charController.SimpleMove(forwardMovement + rightMovement);//simple move 
-
-        if (Input.GetKeyDown(KeyCode.D))
+        CharacterController controller = GetComponent<CharacterController>();
+        if (transform != null)
         {
-            // Move Right
-            Vector3 vectorRotation = Vector3.up * rotationSpeed * Time.deltaTime;
-            //motor.rotate(vectorRotation);
+            transform.Rotate(0, Input.GetAxis("Horizontal") * RotateSpeed, 0);
+            var forward = transform.TransformDirection(Vector3.forward);
+            float curSpeed = Speed * Input.GetAxis("Vertical");
+            controller.SimpleMove(forward * curSpeed);
         }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            // Move Left
-            Vector3 vectorRotation = Vector3.up * rotationSpeed * Time.deltaTime;
-            //motor.rotate(-vectorRotation);
-        }   
-
-        JumpInput(); //calls jump functions 
+        JumpInput(); //calls jump functions
     }
+         
+    
 
     private bool FindCover()
     {

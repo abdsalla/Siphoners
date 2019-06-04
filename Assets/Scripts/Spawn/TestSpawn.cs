@@ -11,14 +11,14 @@ public class TestSpawn : MonoBehaviour
     public CameraFollow cameraFollow;
     public Transform tf;
 
-    // Start is called before the first frame update
+    //Start is called before the first frame update
     void Start()
     {
         tf = GetComponent<Transform>();
         cameraFollow = main.GetComponent<CameraFollow>();
     }
 
-    // Update is called once per frame
+    //Update is called once per frame
     void Update()
     {
         if (currentPlayer == null)

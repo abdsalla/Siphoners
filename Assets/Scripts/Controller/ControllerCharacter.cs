@@ -5,7 +5,7 @@ using UnityEngine;
 public class ControllerCharacter : MonoBehaviour
 {
     public Pawn pawn;
-    // Start is called before the first frame update
+    //Start is called before the first frame update
     void Start()
     {
         

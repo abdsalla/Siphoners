@@ -7,7 +7,7 @@ public class ControllerAI : MonoBehaviour
 {
     //Variables
 
-    //private Pawn pawn;              //The Pawn Component
+    private Pawn pawn;              //The Pawn Component
     public Transform tf;
     public float turnSpeed;
 

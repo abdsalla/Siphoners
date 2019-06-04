@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerLook : MonoBehaviour
 {
-    [SerializeField] private string mouseXInputName; //inout info
+    [SerializeField] private string mouseXInputName; //input info
     [SerializeField] private float mouseSensitivity; // input info
 
     [SerializeField] private Transform playerBody; // for the player
@@ -23,11 +23,11 @@ public class PlayerLook : MonoBehaviour
     }
     private void Update()
     {
-        PlayerRotation(); //calles player rotation function 
+        PlayerRotation(); //call's player rotation function 
     }
     private void PlayerRotation()
     {
-        float mouseX = Input.GetAxis(mouseXInputName) * mouseSensitivity * Time.deltaTime; //this is so we dont whip around that much. 
+        float mouseX = Input.GetAxis(mouseXInputName) * mouseSensitivity * Time.deltaTime; //This is so we dont whip around that much. 
 
         //parameters for x axis 
         if (xAxisClamp > 90.0f)
@@ -44,7 +44,7 @@ public class PlayerLook : MonoBehaviour
         }
 
         
-        playerBody.Rotate(Vector3.up * mouseX); //lets the player rotate.
+        playerBody.Rotate(Vector3.up * mouseX); //Lets the player rotate.
     }
 
     private void ClampXAxisRotationToValue(float value)

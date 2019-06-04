@@ -18,7 +18,7 @@ public class ControllerPlayer : MonoBehaviour
 
     public List<Rigidbody> partRigbody;
     public List<Collider> partColliders;
-    // Start is called before the first frame update
+    //Start is called before the first frame update
     void Start()
     {
         //for future script dealing with health. 
