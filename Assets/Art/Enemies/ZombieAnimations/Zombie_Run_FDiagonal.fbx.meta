@@ -1,0 +1,226 @@
+fileFormatVersion: 2
+guid: 6494edb5d8433c9439a7773cc8b24896
+ModelImporter:
+  serializedVersion: 25
+  internalIDToNameTable:
+  - first:
+      74: -203655887218126122
+    second: Zombie_Run_FDiagonal
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Zombie_Run_FDiagonal
+      takeName: mixamo.com
+      internalID: -203655887218126122
+      firstFrame: 0
+      lastFrame: 42
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: Enemy_Zombie1(Clone)
+      parentName: 
+      position: {x: -111.62101, y: 50.971474, z: 2.7950392}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Box014
+      parentName: Enemy_Zombie1(Clone)
+      position: {x: -0.030273438, y: 0.48746824, z: 39.49948}
+      rotation: {x: 0.66674495, y: 0, z: -0, w: 0.745286}
+      scale: {x: 0.035919, y: 0.047293, z: 0.065374}
+    - name: Box015
+      parentName: Enemy_Zombie1(Clone)
+      position: {x: -0.3332214, y: -1.9405974, z: 39.467163}
+      rotation: {x: 0.6444633, y: -0.17270036, z: -0.15604107, w: 0.7283494}
+      scale: {x: 0.037374, y: 0.047293, z: 0.063774}
+    - name: Box016
+      parentName: Enemy_Zombie1(Clone)
+      position: {x: 0.14663696, y: -1.9203238, z: 39.536575}
+      rotation: {x: -0.733311, y: -0.123648554, z: -0.12397612, w: 0.6569597}
+      scale: {x: -0.035501, y: -0.046546, z: -0.065374}
+    - name: Box017
+      parentName: Enemy_Zombie1(Clone)
+      position: {x: 0.9668579, y: -1.7773237, z: 39.2762}
+      rotation: {x: -0.7284411, y: -0.15095542, z: 0.26798108, w: 0.6121864}
+      scale: {x: -0.02604, y: -0.042686, z: -0.041449}
+    - name: Box018
+      parentName: Enemy_Zombie1(Clone)
+      position: {x: 0.70965576, y: -1.9957228, z: 39.625153}
+      rotation: {x: -0.6946929, y: -0.2665844, z: 0.057436574, w: 0.6656091}
+      scale: {x: -0.016964, y: -0.02106, z: -0.028611}
+    - name: Box019
+      parentName: Enemy_Zombie1(Clone)
+      position: {x: 1.3162537, y: -1.4359897, z: 39.069073}
+      rotation: {x: -0.70247895, y: -0.24316084, z: 0.32607013, w: 0.5840158}
+      scale: {x: -0.027598, y: -0.029225, z: -0.036719}
+    - name: Box020
+      parentName: Enemy_Zombie1(Clone)
+      position: {x: -0.8247985, y: -1.6175879, z: 39.416016}
+      rotation: {x: 0.6510876, y: -0.1478971, z: -0.26969478, w: 0.6938849}
+      scale: {x: 0.039378, y: 0.047296, z: 0.062554}
+    - name: Box021
+      parentName: Enemy_Zombie1(Clone)
+      position: {x: -1.1763, y: -1.457756, z: 39.272644}
+      rotation: {x: 0.6391675, y: -0.19412118, z: -0.30356216, w: 0.679435}
+      scale: {x: 0.036631, y: 0.041754, z: 0.053738}
+    - name: Box022
+      parentName: Enemy_Zombie1(Clone)
+      position: {x: -1.4288025, y: -1.379631, z: 39.12561}
+      rotation: {x: 0.54323447, y: -0.3976427, z: -0.37340423, w: 0.63823664}
+      scale: {x: 0.036635, y: 0.031634, z: 0.033205}
+    - name: Box023
+      parentName: Enemy_Zombie1(Clone)
+      position: {x: 1.1445618, y: -1.3633904, z: 36.72339}
+      rotation: {x: 0.119032644, y: 0.82926875, z: -0.516084, w: 0.1783308}
+      scale: {x: 0.019313, y: 0.021394, z: 0.036859}
+    - name: Box024
+      parentName: Enemy_Zombie1(Clone)
+      position: {x: 0.4987793, y: -1.276124, z: 36.394684}
+      rotation: {x: 0.067516156, y: 0.8358754, z: -0.5225841, w: 0.15381736}
+      scale: {x: 0.019729, y: 0.025195, z: 0.028783}
+    - name: Box025
+      parentName: Enemy_Zombie1(Clone)
+      position: {x: 0.83804315, y: -0.032902714, z: 36.948223}
+      rotation: {x: 0.16847217, y: 0.8190731, z: -0.5104698, w: 0.20039207}
+      scale: {x: 0.024607, y: 0.030683, z: 0.034837}
+    - name: pSphere005
+      parentName: Enemy_Zombie1(Clone)
+      position: {x: -0, y: 2.7950392, z: -0.15988922}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.557616, y: 0.557616, z: 0.557616}
+    - name: Cylinder001
+      parentName: Enemy_Zombie1(Clone)
+      position: {x: -3.2070923, y: 12.028272, z: 46.148865}
+      rotation: {x: 0.45452052, y: 0.6123718, z: -0.3535544, w: 0.54167444}
+      scale: {x: 0.137284, y: 0.137284, z: 0.142072}
+    - name: Cylinder002
+      parentName: Enemy_Zombie1(Clone)
+      position: {x: 12.364655, y: 9.680508, z: 33.572475}
+      rotation: {x: 0.729156, y: 0.44648248, z: -0.51489294, w: 0.06221067}
+      scale: {x: 0.138991, y: 0.176461, z: 0.185215}
+    - name: Cylinder003
+      parentName: Enemy_Zombie1(Clone)
+      position: {x: -3.7249143, y: 7.0485806, z: 16.539383}
+      rotation: {x: 0.20654687, y: 0.8331548, z: -0.31455958, w: 0.40526998}
+      scale: {x: 0.076789, y: 0.115012, z: 0.113834}
+    - name: Cylinder004
+      parentName: Enemy_Zombie1(Clone)
+      position: {x: -14.10556, y: 8.441022, z: 39.802338}
+      rotation: {x: 0.27398688, y: 0.8902316, z: -0.031799756, w: 0.36250198}
+      scale: {x: 0.076676, y: 0.097347, z: 0.102176}
+    - name: Cylinder005
+      parentName: Enemy_Zombie1(Clone)
+      position: {x: -7.354553, y: -5.3139467, z: 35.65909}
+      rotation: {x: 0.51345897, y: 0.7845918, z: 0.34730992, w: -0.012306276}
+      scale: {x: 0.076676, y: 0.097347, z: 0.102176}
+    - name: Cylinder006
+      parentName: Enemy_Zombie1(Clone)
+      position: {x: -2.501831, y: 11.416467, z: 11.930641}
+      rotation: {x: 0.115765676, y: 0.45615667, z: -0.47085166, w: 0.74620247}
+      scale: {x: 0.138991, y: 0.176461, z: 0.185215}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
