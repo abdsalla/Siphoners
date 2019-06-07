@@ -34,13 +34,14 @@ public class PlayerMovement : MonoBehaviour
     private bool aCover = false;
     public float maxRayDist = 3;
     public LayerMask activeLayer = 8;
+    
 
     public static Vector3 playerPos;
     
 
 
 
-    public void PlayerMove()
+    public void PlayerMove() //Player movement 
     {
         CharacterController controller = GetComponent<CharacterController>();
         if (transform != null)
@@ -48,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
             transform.Rotate(0, Input.GetAxis("Horizontal") * RotateSpeed, 0);
             var forward = transform.TransformDirection(Vector3.forward);
             float curSpeed = Speed * Input.GetAxis("Vertical");
-            controller.SimpleMove(forward * curSpeed);
+            controller.SimpleMove(forward * curSpeed); //simple move for char 
         }
         JumpInput(); //calls jump functions
     }

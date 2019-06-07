@@ -10,6 +10,11 @@ public class ControllerAI1 : MonoBehaviour
     public float fieldofViewAngle = 160f;
     public float losRadius = 45f;
 
+    //temp
+    public Transform player;
+    public Transform tf;
+
+
     //ai sight and memeory
     private bool aiMemorizesPlayer = false;
     public float memoryStartTime = 10f;
@@ -61,29 +66,13 @@ public class ControllerAI1 : MonoBehaviour
     {
         waitTime = startWaitTime;
         randomSpot = Random.Range(0, moveSpots.Length);
+        tf = GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //float distance = Vector2.Distance(PlayerMove.playerPos, transform.position);
-        /* if (distance > chaseRadius)
-         {
-             Patrol();
-         }
-         else if (distance <=chaseRadius)
-         {
-             ChasePlayer();
-
-             FacePlayer();
-         }*/
-        //states for the AI 
         float distance = Vector3.Distance(PlayerMovement.playerPos, transform.position);
-        if (distance <= losRadius)
-        {
-            CheckLOS();
-        }
-        if (nav.isActiveAndEnabled)
         {
             if (playerIsInLOS == false && aiMemorizesPlayer == false && aiHeardPlayer == false)
             {
@@ -176,7 +165,7 @@ public class ControllerAI1 : MonoBehaviour
 
             if (Physics.Raycast(transform.position, direction.normalized, out hit, losRadius))
             {
-                if (hit.collider.tag == "Grey")
+                if (hit.collider.tag == "Player")
                 {
                     Debug.Log("player seen");
                     playerIsInLOS = true;
@@ -245,10 +234,18 @@ public class ControllerAI1 : MonoBehaviour
             }
         }
     }
-    void FacePlayer()
+    void FacePlayer() //makes the zombie turn towards the player
     {
         Vector3 direction = (PlayerMovement.playerPos - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * facePlayerFactor);
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        //simple temp kill mechanic 
+        if (collision.gameObject == player.gameObject)
+        {
+            Destroy(player.gameObject);
+        }
     }
 }

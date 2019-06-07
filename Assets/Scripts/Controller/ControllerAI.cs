@@ -60,6 +60,7 @@ public class ControllerAI : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        //simple temp kill mechanic 
         if (collision.gameObject == player.gameObject)
         {
             Destroy(player.gameObject);
