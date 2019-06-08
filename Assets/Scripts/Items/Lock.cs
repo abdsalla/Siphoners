@@ -22,7 +22,7 @@ public class Lock : MonoBehaviour
     private void OnTriggerEnter(Collider collider)
     {
         Debug.Log("collision Detected");
-        for (int i = 0; collider.GetComponent<Inventory>().items.Count > i; i++)
+        for (int i = 0; collider.GetComponent<Inventory>().items.Length > i; i++)
         {
             Debug.Log("Trying key");
             if (collider.GetComponent<Inventory>().items[i] == key)

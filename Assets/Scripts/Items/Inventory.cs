@@ -1,17 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 public class Inventory : MonoBehaviour
 {
-
-    public List<Item> items;
+    public const int MAX_INVENTORY = 20;
+    public Item[] items;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        items = new Item[MAX_INVENTORY];
     }
 
     // Update is called once per frame
@@ -20,9 +22,17 @@ public class Inventory : MonoBehaviour
         
     }
 
-    public void AddItem(Item item)
+    public bool AddItem(Item item)
     {
-        items.Add(item);
+        for (int i = 0; i < items.Length; i++)
+        {
+            if (items[i] == null)
+            {
+                items[i] = item;
+                return true;
+            }
+        }
+        return false;
     }
 
 }
