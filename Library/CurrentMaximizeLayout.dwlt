@@ -21,12 +21,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< HEAD
     width: 1662
     height: 1052
   m_MinSize: {x: 772, y: 494}
   m_MaxSize: {x: 22012, y: 14044}
   vertical: 0
   controlID: 3796
+=======
+    width: 1920
+    height: 947
+  m_MinSize: {x: 683, y: 494}
+  m_MaxSize: {x: 18008, y: 14044}
+  vertical: 0
+  controlID: 7260
+>>>>>>> PlayerMechanics
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -55,7 +64,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_VSyncEnabled: 0
   m_MaximizeOnPlay: 1
-  m_Gizmos: 0
+  m_Gizmos: 1
   m_Stats: 0
   m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_TargetDisplay: 0
@@ -76,7 +85,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -125,6 +134,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 57
     height: 1052
   m_MinSize: {x: 57, y: 58}
@@ -134,6 +144,14 @@ MonoBehaviour:
   - {fileID: 4}
   m_Selected: 0
   m_LastSelected: 0
+=======
+    width: 1325
+    height: 947
+  m_MinSize: {x: 406, y: 494}
+  m_MaxSize: {x: 14006, y: 14044}
+  vertical: 1
+  controlID: 7261
+>>>>>>> PlayerMechanics
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,6 +172,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 177.33334
     y: 188.66667
     width: 57
@@ -162,6 +181,16 @@ MonoBehaviour:
   dragSelectMode: 2
   drawNormals: 0
   selection: []
+=======
+    x: 0
+    y: 0
+    width: 1325
+    height: 576
+  m_MinSize: {x: 406, y: 222}
+  m_MaxSize: {x: 8006, y: 4022}
+  vertical: 0
+  controlID: 7187
+>>>>>>> PlayerMechanics
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -196,6 +225,64 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
+<<<<<<< HEAD
+=======
+  m_Script: {fileID: 12061, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Hierarchy
+    m_Image: {fileID: -590624980919486359, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 73
+    width: 405
+    height: 557
+  m_ViewDataDictionary: {fileID: 0}
+  m_SceneHierarchy:
+    m_TreeViewState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: da87ffff208a0000368a0000
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 5}
+      m_SearchString: 
+    m_ExpandedScenes: []
+    m_CurrenRootInstanceID: 0
+    m_LockTracker:
+      m_IsLocked: 0
+    m_CurrentSortingName: TransformSorting
+  m_WindowGUID: 6ac16a52ea6b04e288cb261518dde5da
+--- !u!114 &7
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+>>>>>>> PlayerMechanics
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -241,7 +328,11 @@ MonoBehaviour:
     height: 539
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
+<<<<<<< HEAD
   m_WindowGUID: e4acd3af86bd8f947b0bd9b234940c8e
+=======
+  m_WindowGUID: 22f3ba9777bcc4637a17788d8b7e2717
+>>>>>>> PlayerMechanics
   m_Gizmos: 1
   m_SceneIsLit: 0
   m_SceneLighting: 1
@@ -250,9 +341,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: 13.577238, y: -1.0050741, z: -0.5479035}
     speed: 2
     m_Value: {x: 13.577238, y: -1.0050741, z: -0.5479035}
+=======
+    m_Target: {x: -1.6345874, y: 5.006516, z: -0.9267945}
+    speed: 2
+    m_Value: {x: -1.6345874, y: 5.006516, z: -0.9267945}
+>>>>>>> PlayerMechanics
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -269,18 +366,19 @@ MonoBehaviour:
     showParticleSystems: 0
   grid:
     xGrid:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    yGrid:
       m_Target: 1
       speed: 2
       m_Value: 1
+    yGrid:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
     zGrid:
       m_Target: 0
       speed: 2
       m_Value: 0
   m_Rotation:
+<<<<<<< HEAD
     m_Target: {x: -0.19076823, y: -0.24682014, z: 0.04929503, w: -0.9489433}
     speed: 2
     m_Value: {x: -0.19074571, y: -0.246791, z: 0.049289215, w: -0.9488313}
@@ -288,10 +386,19 @@ MonoBehaviour:
     m_Target: 18.740396
     speed: 2
     m_Value: 18.740396
-  m_Ortho:
-    m_Target: 0
+=======
+    m_Target: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
     speed: 2
-    m_Value: 0
+    m_Value: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_Size:
+    m_Target: 5.123157
+    speed: 2
+    m_Value: 5.123157
+>>>>>>> PlayerMechanics
+  m_Ortho:
+    m_Target: 1
+    speed: 2
+    m_Value: 1
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.5
@@ -463,6 +570,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 0
     width: 316
     height: 542
@@ -473,6 +581,15 @@ MonoBehaviour:
   - {fileID: 12}
   m_Selected: 0
   m_LastSelected: 0
+=======
+    y: 576
+    width: 1325
+    height: 371
+  m_MinSize: {x: 336, y: 272}
+  m_MaxSize: {x: 14006, y: 10022}
+  vertical: 0
+  controlID: 7262
+>>>>>>> PlayerMechanics
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -544,18 +661,33 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 542
     width: 316
     height: 510
   m_MinSize: {x: 234, y: 272}
   m_MaxSize: {x: 10004, y: 10022}
   m_ActualView: {fileID: 14}
+=======
+    y: 0
+    width: 608
+    height: 371
+  m_MinSize: {x: 232, y: 272}
+  m_MaxSize: {x: 10002, y: 10022}
+  m_ActualView: {fileID: 13}
+>>>>>>> PlayerMechanics
   m_Panes:
   - {fileID: 14}
+<<<<<<< HEAD
   - {fileID: 15}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &14
+=======
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &13
+>>>>>>> PlayerMechanics
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -593,6 +725,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets/ProCore/ProBuilder/Resources/Materials
   m_ViewMode: 1
   m_StartGridSize: 64
@@ -600,13 +733,28 @@ MonoBehaviour:
   - Assets/ProCore/ProBuilder/Resources/Materials
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\darpaler\Desktop\GAM381\Siphoners
+=======
+    - Assets/Scripts/Camera
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Scripts/Camera
+  m_LastFoldersGridSize: -1
+  m_LastProjectPath: D:\Unity 2019\SiphonersRepo\Siphoners
+>>>>>>> PlayerMechanics
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: b4330000
     m_LastClickedID: 13236
     m_ExpandedIDs: 00000000b42f0000ba2f00007e3100004e33000030350000ae36000000ca9a3b
+=======
+    m_SelectedIDs: c2320000
+    m_LastClickedID: 12994
+    m_ExpandedIDs: 00000000262d0000a2300000e832000000ca9a3b
+>>>>>>> PlayerMechanics
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -634,7 +782,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000b42f0000ba2f00007e3100004e33000030350000ae36000000ca9a3b
+=======
+    m_ExpandedIDs: 00000000262d0000e832000000ca9a3b
+>>>>>>> PlayerMechanics
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -662,7 +814,11 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
+<<<<<<< HEAD
     m_ExpandedInstanceIDs: 6881ffffdc370000e23700006c310000
+=======
+    m_ExpandedInstanceIDs: e0350000103700006a2f0000a82e0000442c0000043000000e2e0000be2b0000e82d0000b80a0000520a00003a0b0000260a0000360d0000ca0b00008a0c0000100a0000e40a0000d20a00006a0d0000ea0c0000f60b0000c00c00005a0d00005c0b00001c0a0000020b0000340a0000f00a0000440d0000960c0000500d0000a20c00009a090000760d0000f60c0000143000000000000092370000
+>>>>>>> PlayerMechanics
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -715,6 +871,35 @@ MonoBehaviour:
     width: 484
     height: 615
   m_ViewDataDictionary: {fileID: 0}
+<<<<<<< HEAD
+=======
+--- !u!114 &15
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 608
+    y: 0
+    width: 717
+    height: 371
+  m_MinSize: {x: 104, y: 122}
+  m_MaxSize: {x: 4004, y: 4022}
+  m_ActualView: {fileID: 2}
+  m_Panes:
+  - {fileID: 2}
+  m_Selected: 0
+  m_LastSelected: 0
+>>>>>>> PlayerMechanics
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -740,7 +925,11 @@ MonoBehaviour:
   m_Panes:
   - {fileID: 17}
   m_Selected: 0
+<<<<<<< HEAD
   m_LastSelected: 0
+=======
+  m_LastSelected: 2
+>>>>>>> PlayerMechanics
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -773,7 +962,11 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewResizer:
+<<<<<<< HEAD
     m_CachedPref: 339
+=======
+    m_CachedPref: 147
+>>>>>>> PlayerMechanics
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
