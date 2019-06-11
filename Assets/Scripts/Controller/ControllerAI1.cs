@@ -106,7 +106,7 @@ public class ControllerAI1 : MonoBehaviour
 
         if (distance <= noiseTravelDistance)
         {
-            if (Input.GetButton("Fire1"))//tmp solutions for hearing
+            if (Input.GetKey("N"))//tmp solutions for hearing
             {
                 noisePosition = PlayerMovement.playerPos;
                 aiHeardPlayer = true;
