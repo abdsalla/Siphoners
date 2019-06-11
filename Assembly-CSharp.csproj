@@ -71,11 +71,17 @@
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\ControllerAI.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Items\Inventory.cs" />
+    <Compile Include="Assets\Scripts\Items\Item.cs" />
+    <Compile Include="Assets\Scripts\Items\Lock.cs" />
+    <Compile Include="Assets\Scripts\Items\PickUp.cs" />
+    <Compile Include="Assets\Scripts\Items\PickUp_Item.cs" />
     <Compile Include="Assets\Scripts\IUVSensor.cs" />
     <Compile Include="Assets\Scripts\Player\InputAnimation.cs" />
     <Compile Include="Assets\Scripts\PlayerLook.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
+    <Compile Include="Assets\Scripts\Tests\TestDoor.cs" />
     <Compile Include="Assets\Scripts\TestSpawn.cs" />
     <Compile Include="Assets\Scripts\TestUVSensor.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonCamera.cs" />
