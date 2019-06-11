@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Level1/Level1.1.unity
+=======
+- path: Assets/Scenes/Test/TestItems.unity
+>>>>>>> develop
   isLoaded: 1
   isActive: 1
   isSubScene: 0
