@@ -84,7 +84,6 @@ MonoBehaviour:
   playerIsInLOS: 0
   fieldofViewAngle: 160
   losRadius: 45
-  player: {fileID: 0}
   tf: {fileID: 0}
   memoryStartTime: 10
   noiseTravelDistance: 50
@@ -139,19 +138,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &3948077763922837059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5038277669812647162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ae912efd50d5b1428508ef6de0f9ae1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 4
 --- !u!1001 &3948077762626481651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -163,16 +149,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy_Zombie_1
-      objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 00c60bdab760e3f40ba9c7bc7a16f93b,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: be539a60198938244bb6c846218598b0, type: 2}
-    - target: {fileID: -6057140222963153312, guid: 00c60bdab760e3f40ba9c7bc7a16f93b,
-        type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 00c60bdab760e3f40ba9c7bc7a16f93b,
         type: 3}
@@ -229,14 +205,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 00c60bdab760e3f40ba9c7bc7a16f93b,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: be539a60198938244bb6c846218598b0, type: 2}
+    - target: {fileID: -6057140222963153312, guid: 00c60bdab760e3f40ba9c7bc7a16f93b,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00c60bdab760e3f40ba9c7bc7a16f93b, type: 3}
---- !u!1 &5038277669812647162 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 00c60bdab760e3f40ba9c7bc7a16f93b,
-    type: 3}
-  m_PrefabInstance: {fileID: 3948077762626481651}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8336399305990588137 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 00c60bdab760e3f40ba9c7bc7a16f93b,
