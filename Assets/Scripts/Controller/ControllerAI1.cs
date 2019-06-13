@@ -11,7 +11,7 @@ public class ControllerAI1 : MonoBehaviour
     public float losRadius = 45f;
 
     //temp
-    public Transform player;
+    //public Transform player;
     public Transform tf;
 
 
@@ -242,10 +242,10 @@ public class ControllerAI1 : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        //simple temp kill mechanic 
-        if (collision.gameObject == player.gameObject)
-        {
-            Destroy(player.gameObject);
-        }
+       //simple temp kill mechanic 
+       //if (collision.gameObject == player.gameObject)
+       //{
+       //   Destroy(player.gameObject);
+       // }
     }
 }
