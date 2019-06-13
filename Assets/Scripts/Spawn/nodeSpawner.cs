@@ -32,7 +32,6 @@ public class nodeSpawner : MonoBehaviour
     }
 
 
-    //Start is called before the first frame update
     void Start()
     {
         InvokeRepeating("spawnObject", spawnTime, spawnDelay); //spawns out node and then checks the start time and delay 
