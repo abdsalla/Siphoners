@@ -15,7 +15,7 @@ public class ControllerAI1 : MonoBehaviour
     public Transform tf;
 
 
-    //ai sight and memeory
+    //ai sight and memory
     private bool aiMemorizesPlayer = false;
     public float memoryStartTime = 10f;
     private float increasingMemoryTime;

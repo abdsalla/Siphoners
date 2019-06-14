@@ -6,28 +6,28 @@ using UnityEngine.AI;
 public class ControllerAI : MonoBehaviour
 {
     //Variables
-
-    private Pawn pawn;              //The Pawn Component
-    public Transform tf;
-    public float turnSpeed;
-
     private NavMeshAgent agent;     //The NavMesh Component
+    private Pawn pawn;              //The Pawn Component
+    private Energy eRef;
     //private Health hp;              //The Health Component
+
+    //Temp
+    public int zombieDamage = 10;
+    public float sightRadius = 10;
+    public float turnSpeed;
     public float targetDistance;    //Distance from the AI to the player to stop at
     public TestSpawn playerSpawn;
     public Transform player;
+    public Transform tf;
 
-    //Temp
-    public float sightRadius = 10;
 
     // Start is called before the first frame update
     void Start()
     {
         //Get Components
         tf = GetComponent<Transform>();
-
+        eRef = GetComponent<Energy>();
         agent = GetComponent<NavMeshAgent>();
-
     }
 
     // Update is called once per frame
@@ -63,8 +63,9 @@ public class ControllerAI : MonoBehaviour
         //simple temp kill mechanic 
         if (collision.gameObject == player.gameObject)
         {
-            Destroy(player.gameObject);
+            eRef.ReceiveDamage(zombieDamage);
+            Debug.Log("Dealt Damage");
+            //Destroy(player.gameObject);
         }
     }
-
 }

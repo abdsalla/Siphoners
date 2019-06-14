@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public IUVSensor sensor;
 
+    private Energy eRef;
+
 
     void Awake()
     {
@@ -25,6 +27,19 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
+        if (eRef.healthBar.value <= 0 && eRef.currentHealth <= 0)
+        {
+            eRef.healthBar.value = 0;
+            eRef.currentHealth = 0;
+            OnDeath();
+        }
         sensor.GetUVValue();
     }
+
+    private void OnDeath()
+    {
+        Destroy(eRef.gameObject);
+    }
+
+
 }

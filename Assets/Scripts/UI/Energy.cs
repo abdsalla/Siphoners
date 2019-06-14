@@ -30,6 +30,7 @@ public class Energy : MonoBehaviour
     void Update()
     {
         //Testing Purposes
+        /*
         if (Input.GetKeyDown(KeyCode.K))
         {
             UseEnergy(20);
@@ -51,7 +52,7 @@ public class Energy : MonoBehaviour
         {
 
             HealDamage(20);
-        }
+        }*/
 
     }
 
