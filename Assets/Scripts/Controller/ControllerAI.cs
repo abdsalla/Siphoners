@@ -13,6 +13,8 @@ public class ControllerAI : MonoBehaviour
     private NavMeshAgent agent;     //The NavMesh Component
     public TestSpawn playerSpawn;
     public GameObject player;
+    private Vector3 input;
+    public Animator anim;
 
     //Temp
     public float sightRadius = 20;
@@ -25,6 +27,7 @@ public class ControllerAI : MonoBehaviour
 
         agent = GetComponent<NavMeshAgent>();
 
+        anim = GetComponentInChildren<Animator>();
 
     }
 
@@ -46,6 +49,10 @@ public class ControllerAI : MonoBehaviour
             GetComponent<ControllerAI1>().enabled = true;
             agent.SetDestination(tf.position);
         }
+        input = agent.desiredVelocity;
+        input = transform.InverseTransformDirection(input);
+        anim.SetFloat("Horizontal", input.x);
+        anim.SetFloat("Vertical", input.z);
     }
 
     public void RotateTowards(Vector3 targetPoint)
