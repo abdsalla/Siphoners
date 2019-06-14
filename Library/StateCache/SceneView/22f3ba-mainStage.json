@@ -1,9 +1,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":false,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":413.459716796875,"y":9.89693832397461,"z":-334.31072998046877},"rotation":{"x":0.7207601070404053,"y":0.0,"z":0.0,"w":0.6931846737861633},"size":638.5928344726563,"orthographic":false}
+=======
+>>>>>>> Level1
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":-6.3268890380859379,"y":-19.912513732910158,"z":-35.533531188964847},"rotation":{"x":0.04093185439705849,"y":-0.9534178972244263,"z":0.25771719217300417,"w":0.15142527222633363},"size":48.488136291503909,"orthographic":false}
 =======
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":-4.832675933837891,"y":-13.454750061035157,"z":-6.216453552246094},"rotation":{"x":0.2828364670276642,"y":0.5423330664634705,"z":-0.20042981207370759,"w":0.7653173804283142},"size":69.0115737915039,"orthographic":false}
 >>>>>>> PlayerMechanics
+<<<<<<< HEAD
 =======
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":-45.19062805175781,"y":55.42934799194336,"z":-38.80232238769531},"rotation":{"x":0.40100109577178957,"y":0.41300511360168459,"z":-0.20955108106136323,"w":0.7904230356216431},"size":7.7150421142578129,"orthographic":false}
 >>>>>>> PlayerMechanics
+=======
+>>>>>>> develop
+>>>>>>> Level1
