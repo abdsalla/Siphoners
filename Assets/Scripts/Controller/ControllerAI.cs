@@ -11,18 +11,13 @@ public class ControllerAI : MonoBehaviour
     public Transform tf;
     public float turnSpeed;
     private NavMeshAgent agent;     //The NavMesh Component
-    private Pawn pawn;              //The Pawn Component
     private Energy eRef;
     //private Health hp;              //The Health Component
 
     //Temp
     public int zombieDamage = 10;
-    public float sightRadius = 10;
-    public float turnSpeed;
     public float targetDistance;    //Distance from the AI to the player to stop at
     public TestSpawn playerSpawn;
-    public Transform player;
-    public Transform tf;
     public GameObject player;
     private Vector3 input;
     public Animator anim;
