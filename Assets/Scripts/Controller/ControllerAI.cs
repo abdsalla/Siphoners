@@ -6,6 +6,10 @@ using UnityEngine.AI;
 public class ControllerAI : MonoBehaviour
 {
     //Variables
+
+    private Pawn pawn;              //The Pawn Component
+    public Transform tf;
+    public float turnSpeed;
     private NavMeshAgent agent;     //The NavMesh Component
     private Pawn pawn;              //The Pawn Component
     private Energy eRef;
@@ -19,7 +23,12 @@ public class ControllerAI : MonoBehaviour
     public TestSpawn playerSpawn;
     public Transform player;
     public Transform tf;
+    public GameObject player;
+    private Vector3 input;
+    public Animator anim;
 
+    //Temp
+    public float sightRadius = 20;
 
     // Start is called before the first frame update
     void Start()
@@ -28,24 +37,33 @@ public class ControllerAI : MonoBehaviour
         tf = GetComponent<Transform>();
         eRef = GetComponent<Energy>();
         agent = GetComponent<NavMeshAgent>();
+
+        anim = GetComponentInChildren<Animator>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(player == null)
+        player = playerSpawn.currentPlayer;
+        if(Vector3.Distance(player.transform.localPosition, tf.position) <= sightRadius)
         {
-            player = playerSpawn.currentPlayer.transform;
+            Debug.Log("Chase");
+            GetComponent<ControllerAI1>().enabled = false;
+            agent.SetDestination(player.transform.position);
+            Debug.Log(tf.position + " : " + agent.destination);
+            RotateTowards(player.transform.localPosition);
         }
-        else if((player.position - tf.position).magnitude <= sightRadius)
+        else if (Vector3.Distance(player.transform.localPosition, tf.position) >= ((sightRadius)*(2)))
         {
-            agent.SetDestination(player.position);
-            RotateTowards(player.position);
-        }
-        else if ((player.position - tf.position).magnitude <= (sightRadius * 1.5))
-        {
+            Debug.Log("UnChase");
+            GetComponent<ControllerAI1>().enabled = true;
             agent.SetDestination(tf.position);
         }
+        input = agent.desiredVelocity;
+        input = transform.InverseTransformDirection(input);
+        anim.SetFloat("Horizontal", input.x);
+        anim.SetFloat("Vertical", input.z);
     }
 
     public void RotateTowards(Vector3 targetPoint)
