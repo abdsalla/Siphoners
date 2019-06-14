@@ -10,6 +10,7 @@ public class SceneLoader : MonoBehaviour
     public const int SETTING_INDEX = 3;
     public const int LEVEL_1_1_INDEX = 4;
     public const int LEVEL_1_2_INDEX = 5;
+    public const int CREDITS_INDEX = 6;
 
     public void RunSetings()
     {
@@ -29,6 +30,11 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene(LEVEL_1_1_INDEX);
         SceneManager.LoadSceneAsync(LEVEL_1_2_INDEX, LoadSceneMode.Additive);
+    }
+
+    public void RunCredits()
+    {
+        SceneManager.LoadScene(CREDITS_INDEX);
     }
     public void Quit()
     {
