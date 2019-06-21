@@ -19,7 +19,7 @@ public class nodeSpawner : MonoBehaviour
     {
         scentNode.Add(spawn); //add to list 
         scentListSize = scentNode.Count; 
-        Debug.Log(scentListSize); //too see if list is increasing 
+        Debug.Log(scentListSize); //too see if list is increasing
     }
     static GameObject FindObjectWithScent()//trying to add node to list 
     {
@@ -40,8 +40,10 @@ public class nodeSpawner : MonoBehaviour
 
     public void spawnObject()
     {
-        Instantiate(spawn, transform.position, transform.rotation); //spawns node at posiiton 
-        
+        scentNode.Add(Instantiate(spawn, transform.position, transform.rotation)); //spawns node at posiiton 
+        Debug.Log(scentListSize);
+
+
         if (stopSpawning)
         {
             CancelInvoke("spawnObject");//stops the time counter for spawner 
