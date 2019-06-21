@@ -6,20 +6,29 @@ using UnityEngine.AI;
 public class werewolfController : MonoBehaviour
 {
     public GameObject spawnNode;
+    private GameObject list;
     public Transform tf;
-    private NavMeshAgent agent;
+    private NavMeshAgent nav;
     public GameObject node;
     public float turnSpeed;
     public nodeSpawner scentNode;
-    Transform[] nodelist;
+    
     nodeSpawner node1;
+    public List<Transform> waypoints;
+    public int currentWaypoint = 0;
 
+
+    private void Awake()
+    {
+        nav = GetComponent<NavMeshAgent>();
+        nav.enabled = true;
+        
+    }
     // Start is called before the first frame update
     void Start()
     {
-        tf = GetComponent<Transform>();
 
-        agent = GetComponent<NavMeshAgent>();
+        tf = GetComponent<Transform>();
 
         scentNode = GetComponent<nodeSpawner>();
         
@@ -28,9 +37,10 @@ public class werewolfController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        agent.SetDestination(node.transform.position);
+        nav.SetDestination(node.transform.position);
         RotateTowards(node.transform.localPosition);
-        nodelist = nodeSpawner.scentNode;
+        
+        //GetComponent<nodeSpawner>().scentNode[0];
 
     }
     public void RotateTowards(Vector3 targetPoint)
@@ -42,4 +52,18 @@ public class werewolfController : MonoBehaviour
         //Look There
         tf.rotation = Quaternion.RotateTowards(tf.rotation, lookRotation, turnSpeed * Time.deltaTime);
     }
+    
+    public void getNextWaypoint()
+    {
+        int maxWaypoints = waypoints.Count - 1;
+        if (currentWaypoint < maxWaypoints)
+        {
+            currentWaypoint++;
+        }
+        else
+        {
+            currentWaypoint = 0;
+        }
+    }
+
 }

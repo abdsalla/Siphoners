@@ -9,11 +9,13 @@ public class nodeSpawner : MonoBehaviour
     public bool stopSpawning = false;
     public float spawnTime;
     public float spawnDelay;
-    public Transform[] nodeList;
+    public List<Transform> waypoints;
+    public int currentWaypoint = 0;
 
     //list of node points 
-    static List<GameObject> scentNode = new List<GameObject>();
-    int scentListSize;
+    public List<GameObject> scentNode = new List<GameObject>();
+    [HideInInspector]
+    public int scentListSize;
 
     public void Awake()
     {
@@ -21,7 +23,7 @@ public class nodeSpawner : MonoBehaviour
         scentListSize = scentNode.Count; 
         Debug.Log(scentListSize); //too see if list is increasing
     }
-    static GameObject FindObjectWithScent()//trying to add node to list 
+    GameObject FindObjectWithScent()//trying to add node to list 
     {
         for (int i = 0; i < scentNode.Count; i++)
         {
