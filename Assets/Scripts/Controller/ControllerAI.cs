@@ -32,7 +32,6 @@ public class ControllerAI : MonoBehaviour
         tf = GetComponent<Transform>();
         eRef = GetComponent<Energy>();
         agent = GetComponent<NavMeshAgent>();
-
         anim = GetComponentInChildren<Animator>();
 
     }
@@ -69,6 +68,11 @@ public class ControllerAI : MonoBehaviour
         Quaternion lookRotation = Quaternion.LookRotation(vectorToLookDown, tf.up);
         //Look There
         tf.rotation = Quaternion.RotateTowards(tf.rotation, lookRotation, turnSpeed * Time.deltaTime);
+    }
+
+    private void Attack()
+    {
+       player.gameObject.GetComponentInChildren<Energy>();
     }
 
     private void OnCollisionEnter(Collision collision)

@@ -86,16 +86,18 @@ public class Energy : MonoBehaviour
         energyBar.value = CalculateEnergy();
     }
 
-    public void ReceiveDamage (float damagevalue)
+    public float ReceiveDamage (float damageValue)
     {
-        currentHealth -= damagevalue;
+        currentHealth -= damageValue;
         healthBar.value = CalculateHealth();
+        return currentHealth;
     }
 
-    public void HealDamage (float healValue)
+    public float HealDamage (float healValue)
     {
         currentHealth += healValue;
         healthBar.value = CalculateHealth();
+        return currentHealth;
     }
 
     public float CalculateHealth ()
