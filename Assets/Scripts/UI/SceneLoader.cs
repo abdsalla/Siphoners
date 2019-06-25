@@ -4,10 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
-    const int MENU_INDEX = 0;       //The Menu Scene Index
-    const int HUB_WORLD_INDEX = 1;   //The Hub World Scene Index
-    const int HUB_WORLD_2_INDEX = 2;
-    const int SETTING_INDEX = 3;
+    public const int MENU_INDEX = 0;       //The Menu Scene Index
+    public const int HUB_WORLD_INDEX = 1;   //The Hub World Scene Index
+    public const int HUB_WORLD_2_INDEX = 2;
+    public const int SETTING_INDEX = 3;
+    public const int LEVEL_1_1_INDEX = 4;
+    public const int LEVEL_1_2_INDEX = 5;
+    public const int CREDITS_INDEX = 6;
 
     public void RunSetings()
     {
@@ -23,6 +26,16 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadSceneAsync(HUB_WORLD_2_INDEX, LoadSceneMode.Additive);
     }
 
+    public void RunLevel1()
+    {
+        SceneManager.LoadScene(LEVEL_1_1_INDEX);
+        SceneManager.LoadSceneAsync(LEVEL_1_2_INDEX, LoadSceneMode.Additive);
+    }
+
+    public void RunCredits()
+    {
+        SceneManager.LoadScene(CREDITS_INDEX);
+    }
     public void Quit()
     {
         Debug.Log("Saving and Quitting.");
