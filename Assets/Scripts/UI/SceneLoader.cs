@@ -8,6 +8,8 @@ public class SceneLoader : MonoBehaviour
     const int HUB_WORLD_INDEX = 1;   //The Hub World Scene Index
     const int HUB_WORLD_2_INDEX = 2;
     const int SETTING_INDEX = 3;
+    const int CREDTIS_INDEX = 4;
+    const int CONTROLS_INDEX = 4;
 
     public void RunSetings()
     {
@@ -21,6 +23,16 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene(HUB_WORLD_INDEX);
         SceneManager.LoadSceneAsync(HUB_WORLD_2_INDEX, LoadSceneMode.Additive);
+    }
+
+    public void RunCredits()
+    {
+        SceneManager.LoadScene(CREDTIS_INDEX);
+    }
+
+    public void RunControls()
+    {
+        SceneManager.LoadScene(CONTROLS_INDEX);
     }
 
     public void Quit()
