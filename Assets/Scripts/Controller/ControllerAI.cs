@@ -52,7 +52,6 @@ public class ControllerAI : MonoBehaviour
         {
             Debug.Log("UnChase");
             GetComponent<ControllerAI1>().enabled = true;
-            agent.SetDestination(tf.position);
         }
         input = agent.desiredVelocity;
         input = transform.InverseTransformDirection(input);

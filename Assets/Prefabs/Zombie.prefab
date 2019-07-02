@@ -50,7 +50,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &3948077762328172306
 MonoBehaviour:
@@ -68,6 +68,7 @@ MonoBehaviour:
   turnSpeed: 10
   playerSpawn: {fileID: 0}
   player: {fileID: 0}
+  anim: {fileID: 0}
   sightRadius: 20
 --- !u!114 &3948077762328172307
 MonoBehaviour:
