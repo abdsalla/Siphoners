@@ -11,6 +11,12 @@ public class ControllerAI : MonoBehaviour
     public Transform tf;
     public float turnSpeed;
     private NavMeshAgent agent;     //The NavMesh Component
+    private Energy eRef;
+    //private Health hp;              //The Health Component
+
+    //Temp
+    public int zombieDamage = 10;
+    public float targetDistance;    //Distance from the AI to the player to stop at
     public TestSpawn playerSpawn;
     public GameObject player;
     private Vector3 input;
@@ -24,9 +30,8 @@ public class ControllerAI : MonoBehaviour
     {
         //Get Components
         tf = GetComponent<Transform>();
-
+        eRef = GetComponent<Energy>();
         agent = GetComponent<NavMeshAgent>();
-
         anim = GetComponentInChildren<Animator>();
 
     }
@@ -64,13 +69,19 @@ public class ControllerAI : MonoBehaviour
         tf.rotation = Quaternion.RotateTowards(tf.rotation, lookRotation, turnSpeed * Time.deltaTime);
     }
 
+    private void Attack()
+    {
+       player.gameObject.GetComponentInChildren<Energy>();
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         //simple temp kill mechanic 
         if (collision.gameObject == player.gameObject)
         {
-            Destroy(player.gameObject);
+            eRef.ReceiveDamage(zombieDamage);
+            Debug.Log("Dealt Damage");
+            //Destroy(player.gameObject);
         }
     }
-
 }
