@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     //variables
     public float rotationSpeed;
     private bool isJumping;
+    private bool isCrouching;
     public Vector3 rightMovement;
     public Vector3 forwardMovement;
     private bool aCover = false;
