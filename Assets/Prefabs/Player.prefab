@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a00ed4fcca916a147b8be89efda6ccc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  additionalCost: 5
+  additionalCost: 1
   chargeRate: 0
   solarCharged: 0
   energyBar: {fileID: 314931014506052179}
@@ -1865,11 +1865,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character_Player4
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 429bbc71214ec2e44a96594b563b2357,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 041089118f2f19c40a77f51411335fef, type: 2}
     - target: {fileID: -4216859302048453862, guid: 429bbc71214ec2e44a96594b563b2357,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1925,6 +1920,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 429bbc71214ec2e44a96594b563b2357,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 041089118f2f19c40a77f51411335fef, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 429bbc71214ec2e44a96594b563b2357, type: 3}
 --- !u!1 &4634903491110902422 stripped

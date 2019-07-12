@@ -19,7 +19,7 @@ public class Lantern : MonoBehaviour
     {
     lightComp = lightGameObject.AddComponent<Light>();
     lightComp.type = LightType.Spot;
-    lightComp.lightmapBakeType = LightmapBakeType.Mixed;
+    //lightComp.lightmapBakeType = LightmapBakeType.Mixed;
     energyRef = playerReference.GetComponent<Energy>();
     lightComp.color = Color.yellow;
     isOn = true;
