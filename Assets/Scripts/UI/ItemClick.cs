@@ -1,15 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
-public class PickUp_Item : PickUp
+public class ItemClick : MonoBehaviour
 {
-    public Item item;
+
+    [SerializeField] private Button MyButton = null;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+       // MyButton.onClick.AddListener(() => { AddItem(); });
     }
 
     // Update is called once per frame
@@ -17,11 +19,4 @@ public class PickUp_Item : PickUp
     {
         
     }
-
-   /* protected override void OnPickUp(PlayerMovement player)
-    {
-        //player.GetComponent<Inventory>().AddItem(item);
-        base.OnPickUp(player);
-    }
-    */
 }
