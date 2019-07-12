@@ -9,19 +9,21 @@ public class nodeSpawner : MonoBehaviour
     public bool stopSpawning = false;
     public float spawnTime;
     public float spawnDelay;
-    public Transform[] nodeList;
+    public List<Transform> waypoints;
+    public int currentWaypoint = 0;
 
     //list of node points 
-    static List<GameObject> scentNode = new List<GameObject>();
-    int scentListSize;
+    public List<GameObject> scentNode = new List<GameObject>();
+    [HideInInspector]
+    public int scentListSize;
 
     public void Awake()
     {
         scentNode.Add(spawn); //add to list 
         scentListSize = scentNode.Count; 
-        Debug.Log(scentListSize); //too see if list is increasing 
+        Debug.Log(scentListSize); //too see if list is increasing
     }
-    static GameObject FindObjectWithScent()//trying to add node to list 
+    GameObject FindObjectWithScent()//trying to add node to list 
     {
         for (int i = 0; i < scentNode.Count; i++)
         {
@@ -32,7 +34,6 @@ public class nodeSpawner : MonoBehaviour
     }
 
 
-    //Start is called before the first frame update
     void Start()
     {
         InvokeRepeating("spawnObject", spawnTime, spawnDelay); //spawns out node and then checks the start time and delay 
@@ -40,8 +41,10 @@ public class nodeSpawner : MonoBehaviour
 
     public void spawnObject()
     {
-        Instantiate(spawn, transform.position, transform.rotation); //spawns node at posiiton 
-        
+        scentNode.Add(Instantiate(spawn, transform.position, transform.rotation)); //spawns node at posiiton 
+        Debug.Log(scentListSize);
+
+
         if (stopSpawning)
         {
             CancelInvoke("spawnObject");//stops the time counter for spawner 

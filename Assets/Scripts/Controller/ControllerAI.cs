@@ -11,6 +11,12 @@ public class ControllerAI : MonoBehaviour
     public Transform tf;
     public float turnSpeed;
     private NavMeshAgent agent;     //The NavMesh Component
+    private Energy eRef;
+    //private Health hp;              //The Health Component
+
+    //Temp
+    public int zombieDamage = 10;
+    public float targetDistance;    //Distance from the AI to the player to stop at
     public TestSpawn playerSpawn;
     public GameObject player;
     private Vector3 input;
@@ -24,9 +30,7 @@ public class ControllerAI : MonoBehaviour
     {
         //Get Components
         tf = GetComponent<Transform>();
-
         agent = GetComponent<NavMeshAgent>();
-
         anim = GetComponentInChildren<Animator>();
 
     }
@@ -34,10 +38,10 @@ public class ControllerAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        player = playerSpawn.currentPlayer;
-        if(Vector3.Distance(player.transform.localPosition, tf.position) <= sightRadius)
+        if(player == null){player = playerSpawn.currentPlayer;}
+        //if(eRef == null){eRef = player.GetComponent<Energy>();}
+        if (Vector3.Distance(player.transform.localPosition, tf.position) <= sightRadius)
         {
-            Debug.Log("Chase");
             GetComponent<ControllerAI1>().enabled = false;
             agent.SetDestination(player.transform.position);
             Debug.Log(tf.position + " : " + agent.destination);
@@ -45,7 +49,6 @@ public class ControllerAI : MonoBehaviour
         }
         else if (Vector3.Distance(player.transform.localPosition, tf.position) >= ((sightRadius)*(2)))
         {
-            Debug.Log("UnChase");
             GetComponent<ControllerAI1>().enabled = true;
         }
         input = agent.desiredVelocity;
@@ -64,13 +67,19 @@ public class ControllerAI : MonoBehaviour
         tf.rotation = Quaternion.RotateTowards(tf.rotation, lookRotation, turnSpeed * Time.deltaTime);
     }
 
+    private void Attack()
+    {
+       player.gameObject.GetComponentInChildren<Energy>();
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         //simple temp kill mechanic 
         if (collision.gameObject == player.gameObject)
         {
+            //eRef.ReceiveDamage(zombieDamage);
+            Debug.Log("Dealt Damage");
             Destroy(player.gameObject);
         }
     }
-
 }
