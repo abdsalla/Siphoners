@@ -58898,7 +58898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  offsetPosition: {x: 0, y: 4.5, z: -10}
+  offsetPosition: {x: 0, y: 0.25, z: -2.5}
   offsetPositionSpace: 1
   lookAt: 1
 --- !u!1 &1805224785
