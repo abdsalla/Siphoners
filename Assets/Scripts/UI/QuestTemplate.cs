@@ -7,8 +7,9 @@ using UnityEngine;
 [CreateAssetMenu (fileName = "New Quest", menuName = "Quest" )]
 public class QuestTemplate : ScriptableObject 
 {
-    public new string name;
+    public string questName;
     public string description;
-    public string reward;
+    public Item grantedItem;
+    public Item reward;
     public Image questPopUp;
 }

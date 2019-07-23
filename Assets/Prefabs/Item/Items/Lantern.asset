@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10a9b472beddf7243bfe7f0bcfbec117, type: 3}
+  m_Name: Lantern
+  m_EditorClassIdentifier: 
+  name: Lantern
+  description: 
+  price: 0
+  type: 2
+  body: {fileID: 1283385834302101647, guid: 3c785964dab23c5458654e79dd745a5a, type: 3}

@@ -24,7 +24,7 @@ public class TestSpawn : MonoBehaviour
         if (currentPlayer == null)
         {
             currentPlayer = Instantiate(player, tf.position, tf.rotation).GetComponentInChildren<PlayerMovement>().gameObject;
-            cameraFollow.target = currentPlayer.transform;
+            cameraFollow.target = currentPlayer.GetComponent<HumanData>().viewPoint;
         }
         
     }
