@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 3845526679161660704}
   - component: {fileID: 4004409197644888286}
   - component: {fileID: 4004608255999393756}
-  m_Layer: 4
+  - component: {fileID: 2586201222659961207}
+  m_Layer: 1
   m_Name: GroundFog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2290,7 +2291,7 @@ ParticleSystem:
     randomizePerFrame: 0
   ExternalForcesModule:
     serializedVersion: 2
-    enabled: 0
+    enabled: 1
     multiplierCurve:
       serializedVersion: 2
       minMaxState: 0
@@ -2347,7 +2348,7 @@ ParticleSystem:
     influenceFilter: 0
     influenceMask:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 2
     influenceList: []
   ClampVelocityModule:
     enabled: 0
@@ -3554,9 +3555,9 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 3
-    type: 0
+    type: 1
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
@@ -3728,26 +3729,26 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     minKillSpeed: 0
-    maxKillSpeed: 10000
-    radiusScale: 1
+    maxKillSpeed: 5000
+    radiusScale: 5
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 2
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
-    enabled: 0
+    enabled: 1
     collisionShape0: {fileID: 0}
     collisionShape1: {fileID: 0}
     collisionShape2: {fileID: 0}
     collisionShape3: {fileID: 0}
     collisionShape4: {fileID: 0}
     collisionShape5: {fileID: 0}
-    inside: 1
+    inside: 2
     outside: 0
     enter: 0
     exit: 0
@@ -4752,3 +4753,16 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &2586201222659961207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3842731102707938390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0150a199587c31a4abf6c340f1099841, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fogEmitter: {fileID: 3842731102707938390}
