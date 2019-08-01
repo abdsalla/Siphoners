@@ -49,12 +49,12 @@ public class Energy : MonoBehaviour
             HealDamage(20);
         }*/
 
-        if (Input.GetKey(KeyCode.Keypad8))
+        if (Input.GetKey(KeyCode.Mouse0))
         {
             ChargeEnergy();
         }
 
-        else if (Input.GetKey(KeyCode.Space))
+        else if (Input.GetKey(KeyCode.Mouse1))
         {
             SolarCharge();
         }
