@@ -20,7 +20,7 @@ public class Lantern : MonoBehaviour
     {
     lightComp = lightGameObject.GetComponent<Light>();
     //lightComp.type = LightType.Spot;
-    lightComp.lightmapBakeType = LightmapBakeType.Realtime;
+    //lightComp.lightmapBakeType = LightmapBakeType.Realtime;
     energyRef = playerReference.GetComponent<Energy>();
     lightParticle = lightGameObject.GetComponent<ParticleSystem>();
     var lights = lightParticle.lights;

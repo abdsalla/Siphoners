@@ -224,8 +224,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalInputName: Horizontal
   verticalInputName: Vertical
-  Speed: 10
-  RotateSpeed: 5
+  Speed: 8.5
+  RotateSpeed: 135
   charController: {fileID: 342707103206649460}
   jumpFallOff:
     serializedVersion: 2

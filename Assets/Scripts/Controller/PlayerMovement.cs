@@ -47,9 +47,9 @@ public class PlayerMovement : MonoBehaviour
         CharacterController controller = GetComponent<CharacterController>();
         if (transform != null)
         {
-            transform.Rotate(0, Input.GetAxis("Horizontal") * RotateSpeed, 0);
+            transform.Rotate(0, Input.GetAxis("Horizontal") * RotateSpeed * Time.deltaTime, 0);
             var forward = transform.TransformDirection(Vector3.forward);
-            float curSpeed = Speed * Input.GetAxis("Vertical");
+            float curSpeed = Speed * Input.GetAxis("Vertical") /** * Time.deltaTime**/;
             controller.SimpleMove(forward * curSpeed); //simple move for char 
         }
         JumpInput(); //calls jump functions
