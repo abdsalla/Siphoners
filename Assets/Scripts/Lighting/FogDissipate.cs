@@ -7,10 +7,9 @@ public class FogDissipate : MonoBehaviour
 {
     private ParticleCollisionEvent dissipate;
     private ParticleSystem fog;
-
     public GameObject fogEmitter;
-    public GameObject player;
     public GameObject currentPlayer;
+    public TestSpawn spawn;
 
     void Start()
     {
@@ -19,6 +18,11 @@ public class FogDissipate : MonoBehaviour
 
     void Update()
     {
+        if (!currentPlayer)
+        {
+            currentPlayer = spawn.currentPlayer;
+        }
+
         this.transform.position = currentPlayer.transform.position;
 
     }

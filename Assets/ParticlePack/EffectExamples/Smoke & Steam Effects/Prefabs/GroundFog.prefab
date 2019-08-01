@@ -163,7 +163,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: 0.0001
-      minScalar: 60
+      minScalar: 2.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -269,7 +269,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.5907719, g: 0.6037736, b: 0.5895336, a: 0.19607843}
+      maxColor: {r: 0.5907719, g: 0.6037736, b: 0.5895336, a: 0.5882353}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -647,7 +647,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 500
+    maxNumParticles: 750
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -706,12 +706,12 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 10
+    type: 17
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
-    donutRadius: 0.2
+    donutRadius: 4
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
@@ -793,7 +793,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 4
+      value: 5.75
       mode: 0
       spread: 0
       speed:
@@ -912,7 +912,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 500
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -1531,7 +1531,7 @@ ParticleSystem:
     flipU: 0
     flipV: 0
   VelocityModule:
-    enabled: 1
+    enabled: 0
     x:
       serializedVersion: 2
       minMaxState: 3
@@ -4812,5 +4812,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fogEmitter: {fileID: 3842731102707938390}
-  player: {fileID: 342707101601174675, guid: 8bfaa1ac98bb3a24a81398e6a79466a1, type: 3}
   currentPlayer: {fileID: 0}
+  spawn: {fileID: 0}
