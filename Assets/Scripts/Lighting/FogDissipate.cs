@@ -9,6 +9,8 @@ public class FogDissipate : MonoBehaviour
     private ParticleSystem fog;
 
     public GameObject fogEmitter;
+    public GameObject player;
+    public GameObject currentPlayer;
 
     void Start()
     {
@@ -17,7 +19,8 @@ public class FogDissipate : MonoBehaviour
 
     void Update()
     {
-        
+        this.transform.position = currentPlayer.transform.position;
+
     }
 
     void OnParticleCollision(GameObject fogEmitter)
