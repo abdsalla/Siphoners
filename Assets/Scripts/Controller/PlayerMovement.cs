@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     public CharacterController charController;
 
+
     //[Header("jumping")]
     //[SerializeField]
     //private AnimationCurve jumpFallOff;
@@ -39,9 +40,6 @@ public class PlayerMovement : MonoBehaviour
 
     public static Vector3 playerPos;
 
-
-
-
     public void PlayerMove() //Player movement 
     {
         CharacterController controller = GetComponent<CharacterController>();
@@ -53,6 +51,14 @@ public class PlayerMovement : MonoBehaviour
             controller.SimpleMove(forward * curSpeed); //simple move for char 
         }
         //JumpInput(); //calls jump functions
+    }
+    IEnumerator TrackPlayer()
+    {
+        while (true)
+        {
+            playerPos = gameObject.transform.position;
+            yield return null;
+        }
     }
 
 
