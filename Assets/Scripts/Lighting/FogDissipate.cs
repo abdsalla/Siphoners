@@ -29,10 +29,9 @@ public class FogDissipate : MonoBehaviour
 
     void OnParticleCollision(GameObject fogEmitter)
     {
-        if (fog.gameObject.tag == "Fog")
-        {
-            Destroy(fog);
-        }
+
+        Destroy(fogEmitter);
+
     }
 
 }
