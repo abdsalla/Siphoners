@@ -404,7 +404,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -496,10 +496,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 32}
-      m_SelectedIDs: de520000
-      m_LastClickedID: 21214
-      m_ExpandedIDs: 8afbffff7e540000
+      scrollPos: {x: 0, y: 352}
+      m_SelectedIDs: d0410000
+      m_LastClickedID: 16848
+      m_ExpandedIDs: 8cfbffffd03f0000fe400000cc430000e8430000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -549,7 +549,7 @@ MonoBehaviour:
     width: 1021
     height: 440
   m_ViewDataDictionary: {fileID: 0}
-  m_ShowContextualTools: 0
+  m_ShowContextualTools: 1
   m_WindowGUID: 527583d06cad8254a896158c7754edf7
   m_Gizmos: 1
   m_SceneIsLit: 0
@@ -559,9 +559,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 406.0397, y: 31.999813, z: 662.09845}
+    m_Target: {x: 311.01154, y: 39.376534, z: -306.37497}
     speed: 2
-    m_Value: {x: 406.0397, y: 31.999815, z: 662.09845}
+    m_Value: {x: 311.01154, y: 39.376534, z: -306.37497}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -590,20 +590,20 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.031228933, y: -0.9322829, z: 0.35091156, w: -0.082653455}
+    m_Target: {x: -0.22834834, y: 0.759076, z: -0.34444308, w: -0.5031511}
     speed: 2
-    m_Value: {x: -0.023547916, y: -0.9429129, z: 0.32518464, w: -0.06794019}
+    m_Value: {x: -0.22908647, y: 0.7585048, z: -0.34555697, w: -0.50277257}
   m_Size:
-    m_Target: 42.661045
+    m_Target: 4.344725
     speed: 2
-    m_Value: 42.661045
+    m_Value: 4.6447253
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_CameraSettings:
-    m_Speed: 1
-    m_SpeedNormalized: 0.5
+    m_Speed: 1.6
+    m_SpeedNormalized: 0.7999997
     m_SpeedMin: 0.01
     m_SpeedMax: 2
     m_EasingEnabled: 1
