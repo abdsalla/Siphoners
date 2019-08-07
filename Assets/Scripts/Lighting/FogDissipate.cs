@@ -5,10 +5,12 @@ using UnityEngine.Events;
 
 public class FogDissipate : MonoBehaviour
 {
+    //Variables
     private ParticleCollisionEvent dissipate;
     private ParticleSystem fog;
-    public GameObject fogEmitter;
+
     public GameObject currentPlayer;
+    public GameObject fogEmitter;
     public TestSpawn spawn;
 
     void Start()
@@ -18,6 +20,8 @@ public class FogDissipate : MonoBehaviour
 
     void Update()
     {
+
+        //Check to find the active player and not just the prefab
         if (!currentPlayer)
         {
             currentPlayer = spawn.currentPlayer;
@@ -27,6 +31,7 @@ public class FogDissipate : MonoBehaviour
 
     }
 
+   
     void OnParticleCollision(GameObject fogEmitter)
     {
 
