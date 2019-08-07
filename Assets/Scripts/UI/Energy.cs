@@ -119,11 +119,13 @@ public class Energy : MonoBehaviour
         return currentHealth;
     }
 
+    //Get the percentage of health
     public float CalculateHealth ()
     {
         return currentHealth / maxHealth;
     }
 
+    // Get the percentage of energy
     public float CalculateEnergy ()
     {
        return currentEnergy / maxEnergy;
