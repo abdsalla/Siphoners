@@ -5,15 +5,17 @@ using UnityEngine;
 
 public class Energy : MonoBehaviour
 {
+    //Variables
     private float sunValue = 50f;
 
+    public bool solarCharged = false;
     public float additionalCost;
     public float chargeRate;
+    public float currentEnergy { get; set; }
     public float currentHealth { get; set; }
     public float maxHealth { get; set; }
-    public float currentEnergy { get; set; }
     public float maxEnergy { get; set; }
-    public bool solarCharged = false;
+    
     public Slider energyBar;
     public Slider healthBar;
 
@@ -49,12 +51,12 @@ public class Energy : MonoBehaviour
             HealDamage(20);
         }*/
 
-        if (Input.GetKey(KeyCode.Keypad8))
+        if (Input.GetKey(KeyCode.Mouse0))
         {
             ChargeEnergy();
         }
 
-        else if (Input.GetKey(KeyCode.Space))
+        else if (Input.GetKey(KeyCode.Mouse1))
         {
             SolarCharge();
         }
@@ -66,12 +68,16 @@ public class Energy : MonoBehaviour
 
     }
 
+
+
+    //Called for player energy depletion
     public void UseEnergy (float energyUsage)
     {
         currentEnergy -= energyUsage;
         energyBar.value = CalculateEnergy();
     }
 
+    //Called for player recharge
     public void ChargeEnergy ()
     {
 
@@ -96,6 +102,8 @@ public class Energy : MonoBehaviour
         energyBar.value = CalculateEnergy();
     }
 
+
+    // PLayer damage received
     public float ReceiveDamage (float damageValue)
     {
         currentHealth -= damageValue;
@@ -103,6 +111,7 @@ public class Energy : MonoBehaviour
         return currentHealth;
     }
  
+    //Player damage replenish
     public float HealDamage (float healValue)
     {
         currentHealth += healValue;
