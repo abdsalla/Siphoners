@@ -62,7 +62,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Prefabs\test.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Misc\HueCube.cs" />
@@ -72,7 +71,6 @@
     <Compile Include="Assets\Scripts\AI\LineofSight.cs" />
     <Compile Include="Assets\Scripts\AI\Patrol.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
-    <Compile Include="Assets\Scripts\Controller\AI.cs" />
     <Compile Include="Assets\Scripts\Controller\ControllerAI.cs" />
     <Compile Include="Assets\Scripts\Controller\ControllerAI1.cs" />
     <Compile Include="Assets\Scripts\Controller\ControllerCharacter.cs" />
@@ -104,11 +102,13 @@
     <Compile Include="Assets\Scripts\Tools\scentManager.cs" />
     <Compile Include="Assets\Scripts\Tools\TestUVSensor.cs" />
     <Compile Include="Assets\Scripts\Tools\UnityUV.cs" />
+    <Compile Include="Assets\Scripts\trigger_patrol.cs" />
     <Compile Include="Assets\Scripts\UI\Energy.cs" />
     <Compile Include="Assets\Scripts\UI\ItemClick.cs" />
     <Compile Include="Assets\Scripts\UI\QuestTemplate.cs" />
     <Compile Include="Assets\Scripts\UI\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\UI\VolumeSlider.cs" />
+    <Compile Include="Assets\Scripts\Wolf_Patrol.cs" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_TransparentOverlay.shader" />
     <None Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />

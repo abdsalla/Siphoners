@@ -42,7 +42,7 @@ public class nodeSpawner : MonoBehaviour
     public void spawnObject()
     {
         scentNode.Add(Instantiate(spawn, transform.position, transform.rotation)); //spawns node at posiiton 
-        Debug.Log(scentListSize);
+        
 
 
         if (stopSpawning)

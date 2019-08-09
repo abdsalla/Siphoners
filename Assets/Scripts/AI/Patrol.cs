@@ -5,10 +5,16 @@ using UnityEngine.AI;
 
 public class Patrol : MonoBehaviour
 {
+    trigger_patrol trig_patrol;
+    [Header("Patrol Points")]
+
     public Transform[] points;
     private int destPoint = 0;
     private NavMeshAgent agent;
     private float waitTime;
+
+    [Header ("Patrol Settings")]
+
     public float startWaitTime = 1f;
     public GameObject player;
     public float sightRadius = 20;
@@ -16,6 +22,33 @@ public class Patrol : MonoBehaviour
     private Vector3 input;
     public Animator anim;
     public float turnSpeed;
+    Vector3 noisePosition;
+    public float noiseTravelDistance = 50f;
+
+    [Header("Patrol Trigger")]
+
+    public float agro_Radius;
+    public float attackDistance;
+    public float attackCoolDown;
+    float startTimer;
+    bool attacking = false;
+    [HideInInspector]
+    public GameObject target;
+    
+
+    public float spinspeed = 3f;
+    private bool canSpin = false;
+    private bool aiHeardPlayer = false;
+    public float spinTime = 3f;
+    private float isSpinningTime;
+
+    void OnEnable()
+    {
+        trig_patrol = GetComponentInChildren<trigger_patrol>();
+        trig_patrol.agroRad = agro_Radius;
+        
+    }
+
 
 
     void Start()
@@ -83,7 +116,58 @@ public class Patrol : MonoBehaviour
         anim.SetFloat("Horizontal", input.x);
         anim.SetFloat("Vertical", input.z);
 
+        if (attacking == true)
+        {
+            startTimer += Time.deltaTime;
+            if (startTimer >= attackCoolDown)
+            {
+                startTimer = 0f;
+                Attack();
+            }
+        }
+        if (target != null)
+        {
+            ChckDistance();
+        }
 
+
+    }
+    void GoToNoisePosition()//AI is told to go to last spot for hearing 
+    {
+        agent.SetDestination(noisePosition);
+
+        if (Vector3.Distance(transform.position, noisePosition) <= 5f && canSpin == true)
+        {
+            isSpinningTime += Time.deltaTime;
+
+            transform.Rotate(Vector3.up * spinspeed, Space.World);
+
+            if (isSpinningTime >= spinTime)
+            {
+                canSpin = false;
+                aiHeardPlayer = false;
+                isSpinningTime = 0f;
+            }
+        }
+    }
+    void NoiseCheck()
+    {
+        float distance = Vector3.Distance(PlayerMovement.playerPos, transform.position);
+
+        if (distance <= noiseTravelDistance)
+        {
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                noisePosition = PlayerMovement.playerPos;
+                aiHeardPlayer = true;
+                Debug.Log("making noise");
+            }
+            else
+            {
+                aiHeardPlayer = false;
+                canSpin = false;
+            }
+        }
     }
     public void RotateTowards(Vector3 targetPoint)
     {
@@ -93,5 +177,27 @@ public class Patrol : MonoBehaviour
         Quaternion lookRotation = Quaternion.LookRotation(vectorToLookDown, tf.up);
         //Look There
         tf.rotation = Quaternion.RotateTowards(tf.rotation, lookRotation, turnSpeed * Time.deltaTime);
+    }
+    void ChckDistance()
+    {
+        float dist = Vector3.Distance(transform.position, target.transform.position);
+        if (dist <= attackDistance)
+        {
+            attacking = true;
+            agent.isStopped = true;
+            
+        }
+        else
+        {
+            agent.isStopped = false;
+            agent.destination = target.transform.position;
+            attacking = false;
+
+        }
+    }
+    void Attack()
+    {
+        
+        print("Attacking the player");
     }
 }
