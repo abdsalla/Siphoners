@@ -62,12 +62,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Prefabs\test.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Misc\HueCube.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Procedural Mesh\ExtrudeRandomEdges.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Runtime Editing\RuntimeEdit.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Vertex Colors\HighlightNearestFace.cs" />
+    <Compile Include="Assets\Scripts\AI\LineofSight.cs" />
+    <Compile Include="Assets\Scripts\AI\Patrol.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Controller\AI.cs" />
     <Compile Include="Assets\Scripts\Controller\ControllerAI.cs" />
@@ -85,8 +88,6 @@
     <Compile Include="Assets\Scripts\Items\Lock.cs" />
     <Compile Include="Assets\Scripts\Items\PickUp.cs" />
     <Compile Include="Assets\Scripts\Items\PickUp_Item.cs" />
-    <Compile Include="Assets\Scripts\LineofSight.cs" />
-    <Compile Include="Assets\Scripts\Patrol.cs" />
     <Compile Include="Assets\Scripts\Player\HumanData.cs" />
     <Compile Include="Assets\Scripts\Player\InputAnimation.cs" />
     <Compile Include="Assets\Scripts\Player\Lantern.cs" />
@@ -95,7 +96,6 @@
     <Compile Include="Assets\Scripts\Spawn\nodeList.cs" />
     <Compile Include="Assets\Scripts\Spawn\nodeSpawner.cs" />
     <Compile Include="Assets\Scripts\Spawn\TestSpawn.cs" />
-    <Compile Include="Assets\Scripts\Test_Patrol.cs" />
     <Compile Include="Assets\Scripts\Tests\TestDoor.cs" />
     <Compile Include="Assets\Scripts\Tools\GameManager.cs" />
     <Compile Include="Assets\Scripts\Tools\IUVSensor.cs" />
