@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Test/TestArt.unity
+=======
+- path: Assets/Scenes/Test Fog.unity
+>>>>>>> Fog
   isLoaded: 1
   isActive: 1
   isSubScene: 0
