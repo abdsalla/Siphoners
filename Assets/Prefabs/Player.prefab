@@ -163,7 +163,6 @@ GameObject:
   - component: {fileID: 342707103206649460}
   - component: {fileID: 8399116256244751518}
   - component: {fileID: 433081169930732168}
-  - component: {fileID: 9209902116299170180}
   - component: {fileID: 8930132797999891006}
   - component: {fileID: 318233849918112360}
   - component: {fileID: 6128077476823388442}
@@ -256,26 +255,6 @@ MonoBehaviour:
   - {fileID: 0}
   testItem: {fileID: 11400000, guid: 8e2ef5fa491c8834fb6fdf8fd8289589, type: 2}
   inventoryMenu: {fileID: 6720978974051561639}
---- !u!114 &9209902116299170180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 342707101601174675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5019a0a7c3ff2f0409b8d0ac1bb7a988, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawn: {fileID: 4818269687984606057, guid: e50973b4c736c6a41b89e55a1e541ecf, type: 3}
-  stopSpawning: 1
-  spawnTime: 0.5
-  spawnDelay: 1
-  waypoints: []
-  currentWaypoint: 0
-  scentNode: []
-  scentListSize: 0
 --- !u!114 &8930132797999891006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5873,7 +5852,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -30.167572, y: 0}
+  m_AnchoredPosition: {x: -30.167603, y: 0}
   m_SizeDelta: {x: -60.335205, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1155864672294509861
@@ -6224,92 +6203,6 @@ CapsuleCollider:
   m_Height: 3.701542
   m_Direction: 1
   m_Center: {x: 0, y: 0.8507712, z: 0.32269582}
---- !u!1 &8795020573043951393
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3005099417394546221}
-  - component: {fileID: 1371433429644370623}
-  - component: {fileID: 3187532692599384028}
-  m_Layer: 5
-  m_Name: Description
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &3005099417394546221
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8795020573043951393}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1566404, y: 0.2995747, z: 0.28711}
-  m_Children: []
-  m_Father: {fileID: 7082872422687015208}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.4, y: -3.8}
-  m_SizeDelta: {x: 484.85, y: 172.45}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &1371433429644370623
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8795020573043951393}
-  m_CullTransparentMesh: 0
---- !u!114 &3187532692599384028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8795020573043951393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
-    m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 1
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "\u201CIf you are going to live in our home, you're going to abide by our
-    rules!\u201D\r\n\r\nRule Number 1: No Free Loaders! All survivors must contribute
-    to the survival of the Pack, if they have received aid from us in any shape or
-    form, then they must be ready to give back to the community.\r\n\r\nIn order to
-    payback your debt to this society, you must acquire supplies for us from the City
-    Outskirts. We will accept anything edible, clean clothing, special metals, herbs,
-    medicine and medical equipment etc. We will give you a basic hand lantern to help
-    in your search.\r\n"
 --- !u!1001 &7005398289305668
 PrefabInstance:
   m_ObjectHideFlags: 0
