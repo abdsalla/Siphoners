@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Scent
   - Inventory
+  - Fog
   layers:
   - Default
   - TransparentFX
