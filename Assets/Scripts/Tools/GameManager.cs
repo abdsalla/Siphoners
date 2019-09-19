@@ -28,9 +28,9 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
-        if (eRef.healthBar.value <= 0 && eRef.currentHealth <= 0)
+        if (eRef.healthBar.fillAmount <= 0 && eRef.currentHealth <= 0)
         {
-            eRef.healthBar.value = 0;
+            eRef.healthBar.fillAmount = 0;
             eRef.currentHealth = 0;
             OnDeath();
         }

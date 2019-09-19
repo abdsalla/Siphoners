@@ -32,15 +32,15 @@ public class Lantern : MonoBehaviour
     void Update()
     {
        // Debug.Log("energyRef.solarCharged = " + energyRef.solarCharged);
-        if (energyRef.energyBar.value > 0 && isOn == true)
+        if (energyRef.energyBar.fillAmount > 0 && isOn == true)
         {
             energyRef.UseEnergy(energyDepletionRate);
         }
-        else if (energyRef.energyBar.value <= 0 && isOn == true)
+        else if (energyRef.energyBar.fillAmount <= 0 && isOn == true)
         {
             TurnOff();
         }
-        else if (energyRef.energyBar.value > 0 && isOn == false)
+        else if (energyRef.energyBar.fillAmount > 0 && isOn == false)
         {
             TurnOn();
         }
