@@ -11,11 +11,10 @@ public class ControllerAI : MonoBehaviour
     public Transform tf;
     public float turnSpeed;
     private NavMeshAgent agent;     //The NavMesh Component
-    private Energy eRef;
-    //private Health hp;              //The Health Component
+    private Energy eRef;            //The Energy Component
 
     //Temp
-    public int zombieDamage = 10;
+    public int baseDamage = 10;
     public float targetDistance;    //Distance from the AI to the player to stop at
     public TestSpawn playerSpawn;
     public GameObject player;
@@ -39,12 +38,12 @@ public class ControllerAI : MonoBehaviour
     void Update()
     {
         if(player == null){player = playerSpawn.currentPlayer;}
-        //if(eRef == null){eRef = player.GetComponent<Energy>();}
+        if(eRef == null){eRef = player.GetComponent<Energy>();}
         if (Vector3.Distance(player.transform.localPosition, tf.position) <= sightRadius)
         {
             GetComponent<ControllerAI1>().enabled = false;
             agent.SetDestination(player.transform.position);
-            Debug.Log(tf.position + " : " + agent.destination);
+            //Debug.Log(tf.position + " : " + agent.destination);
             RotateTowards(player.transform.localPosition);
         }
         else if (Vector3.Distance(player.transform.localPosition, tf.position) >= ((sightRadius)*(2)))
@@ -70,6 +69,7 @@ public class ControllerAI : MonoBehaviour
     private void Attack()
     {
        player.gameObject.GetComponentInChildren<Energy>();
+       eRef.ReceiveDamage(baseDamage);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -77,9 +77,9 @@ public class ControllerAI : MonoBehaviour
         //simple temp kill mechanic 
         if (collision.gameObject == player.gameObject)
         {
-            //eRef.ReceiveDamage(zombieDamage);
+            Attack();
             Debug.Log("Dealt Damage");
-            Destroy(player.gameObject);
+            //Destroy(player.gameObject);
         }
     }
 }
