@@ -12,5 +12,6 @@ public class Item : ScriptableObject
     public int price;
     public enum ItemType { Default, Consumable, Weapon, Ammunition, Key}
     public ItemType type = ItemType.Default;
-    public GameObject body;
+    //public GameObject body;
+    public Sprite icon;
 }
