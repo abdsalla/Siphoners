@@ -16,8 +16,8 @@ public class Energy : MonoBehaviour
     public float maxHealth { get; set; }
     public float maxEnergy { get; set; }
     
-    public Slider energyBar;
-    public Slider healthBar;
+    public Image energyBar;
+    public Image healthBar;
 
 
     void Start()
@@ -26,8 +26,8 @@ public class Energy : MonoBehaviour
         maxEnergy = 100f;
         currentHealth = maxHealth;
         currentEnergy = maxEnergy;
-        energyBar.value = maxEnergy;
-        healthBar.value = maxHealth;
+        energyBar.fillAmount = maxEnergy;
+        healthBar.fillAmount = maxHealth;
     }
 
     void Update()
@@ -38,8 +38,8 @@ public class Energy : MonoBehaviour
         {
             UseEnergy(20);
         }
-
-        if (Input.GetKeyDown(KeyCode.I))
+        */
+        if (Input.GetKeyDown(KeyCode.K))
         {
 
             ReceiveDamage(20);
@@ -49,7 +49,7 @@ public class Energy : MonoBehaviour
         {
 
             HealDamage(20);
-        }*/
+        }
 
         if (Input.GetKey(KeyCode.Mouse0))
         {
@@ -74,7 +74,7 @@ public class Energy : MonoBehaviour
     public void UseEnergy (float energyUsage)
     {
         currentEnergy -= energyUsage;
-        energyBar.value = CalculateEnergy();
+        energyBar.fillAmount = CalculateEnergy();
     }
 
     //Called for player recharge
@@ -99,7 +99,7 @@ public class Energy : MonoBehaviour
         }
 
         currentEnergy += chargeRate;
-        energyBar.value = CalculateEnergy();
+        energyBar.fillAmount = CalculateEnergy();
     }
 
 
@@ -107,7 +107,7 @@ public class Energy : MonoBehaviour
     public float ReceiveDamage (float damageValue)
     {
         currentHealth -= damageValue;
-        healthBar.value = CalculateHealth();
+        healthBar.fillAmount = CalculateHealth();
         return currentHealth;
     }
  
@@ -115,7 +115,7 @@ public class Energy : MonoBehaviour
     public float HealDamage (float healValue)
     {
         currentHealth += healValue;
-        healthBar.value = CalculateHealth();
+        healthBar.fillAmount = CalculateHealth();
         return currentHealth;
     }
 
