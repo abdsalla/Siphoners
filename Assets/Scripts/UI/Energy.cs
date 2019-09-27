@@ -103,7 +103,7 @@ public class Energy : MonoBehaviour
     }
 
 
-    // PLayer damage received
+    // Player damage received
     public float ReceiveDamage (float damageValue)
     {
         currentHealth -= damageValue;
