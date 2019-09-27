@@ -13,8 +13,8 @@ public class Energy : MonoBehaviour
     public float chargeRate;
     public float currentEnergy { get; set; }
     public float currentHealth { get; set; }
-    public float maxHealth { get; set; }
-    public float maxEnergy { get; set; }
+    public float maxHealth = 100f;
+    public float maxEnergy = 100f;
     
     public Image energyBar;
     public Image healthBar;
@@ -22,10 +22,7 @@ public class Energy : MonoBehaviour
 
     void Start()
     {
-        maxHealth = 100f;
-        maxEnergy = 100f;
-        currentHealth = maxHealth;
-        currentEnergy = maxEnergy;
+        
         energyBar.fillAmount = maxEnergy;
         healthBar.fillAmount = maxHealth;
     }

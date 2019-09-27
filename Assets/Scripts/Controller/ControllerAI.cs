@@ -44,7 +44,7 @@ public class ControllerAI : MonoBehaviour
         {
             GetComponent<ControllerAI1>().enabled = false;
             agent.SetDestination(player.transform.position);
-            Debug.Log(tf.position + " : " + agent.destination);
+            //Debug.Log(tf.position + " : " + agent.destination);
             RotateTowards(player.transform.localPosition);
         }
         else if (Vector3.Distance(player.transform.localPosition, tf.position) >= ((sightRadius)*(2)))
