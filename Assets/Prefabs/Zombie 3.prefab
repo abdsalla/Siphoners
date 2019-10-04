@@ -66,6 +66,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tf: {fileID: 0}
   turnSpeed: 10
+  hp: 3
   zombieDamage: 10
   targetDistance: 0
   playerSpawn: {fileID: 0}
@@ -151,6 +152,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie3_Model
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 98a171647f4552449b375eb3230f3c0e,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: be539a60198938244bb6c846218598b0, type: 2}
+    - target: {fileID: -4448531974363435529, guid: 98a171647f4552449b375eb3230f3c0e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 170c95d05e9e15547a4ed31ad7d97efa, type: 2}
     - target: {fileID: -4216859302048453862, guid: 98a171647f4552449b375eb3230f3c0e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -206,16 +217,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 98a171647f4552449b375eb3230f3c0e,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: be539a60198938244bb6c846218598b0, type: 2}
-    - target: {fileID: -4448531974363435529, guid: 98a171647f4552449b375eb3230f3c0e,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 170c95d05e9e15547a4ed31ad7d97efa, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98a171647f4552449b375eb3230f3c0e, type: 3}
 --- !u!4 &5980577991131295866 stripped
