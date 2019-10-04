@@ -126,6 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tf: {fileID: 0}
   turnSpeed: 0
+  hp: 30
   zombieDamage: 10
   targetDistance: 0
   playerSpawn: {fileID: 0}
@@ -397,16 +398,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7642354450683162877}
     m_Modifications:
-    - target: {fileID: -6057140222963153312, guid: 23bffe810314abc4e9c3eae53a8561ec,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 3733bee284783dc46add47971f910000, type: 2}
     - target: {fileID: -927199367670048503, guid: 23bffe810314abc4e9c3eae53a8561ec,
         type: 3}
       propertyPath: m_Name
       value: Werewolf
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 23bffe810314abc4e9c3eae53a8561ec,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3733bee284783dc46add47971f910000, type: 2}
     - target: {fileID: -4216859302048453862, guid: 23bffe810314abc4e9c3eae53a8561ec,
         type: 3}
       propertyPath: m_LocalPosition.x

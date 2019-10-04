@@ -38,13 +38,13 @@ public class Energy : MonoBehaviour
         {
             UseEnergy(20);
         }
-        */
+        
         if (Input.GetKeyDown(KeyCode.K))
         {
 
             ReceiveDamage(20);
         }
-
+        */
         if (Input.GetKeyDown(KeyCode.L))
         {
 
