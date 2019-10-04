@@ -36,9 +36,9 @@ public class PlayerAttack : MonoBehaviour
     void Attack()
     {
 
-        Instantiate(attackBox, attackPoint);
+        energyRef.currentEnergy -= 10f;
 
-        Debug.Log("Set active to attack");
+        Instantiate(attackBox, attackPoint);
 
     }
 }
