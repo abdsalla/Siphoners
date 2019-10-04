@@ -28,6 +28,7 @@ public class ControllerAI : MonoBehaviour
     void Start()
     {
         //Get Components
+        eRef = player.GetComponent<Energy>();
         tf = GetComponent<Transform>();
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponentInChildren<Animator>();

@@ -4,43 +4,52 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
-    public IUVSensor sensor;
 
+    public static GameManager Instance { get { return instance; } }
+    public IUVSensor sensor;
+    public GameObject player;
+    public GameObject currentPlayer;
+    public Camera main;
+    public CameraFollow cameraFollow;
+    public GameObject spawn;
 
     private Energy eRef;
-
+    private static GameManager instance;
 
     void Awake()
     {
-        if (instance == null)
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
         {
             instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
-        else
-        {
-            Destroy(this.gameObject);
-        }
 
         sensor = GetComponent<IUVSensor>();
-
+        cameraFollow = main.GetComponent<CameraFollow>();
     }
     void Update()
     {
+        if (currentPlayer == null)
+        {
+            currentPlayer = Instantiate(player, spawn.transform.position, spawn.transform.rotation).GetComponentInChildren<PlayerMovement>().gameObject;
+            Debug.Log("Player Instantiated");
+            cameraFollow.target = currentPlayer.GetComponent<HumanData>().viewPoint;
+        }
+
         if (eRef.healthBar.fillAmount <= 0 && eRef.currentHealth <= 0)
         {
             eRef.healthBar.fillAmount = 0;
             eRef.currentHealth = 0;
-            OnDeath();
         }
         sensor.GetUVValue();
+
+        if (spawn == null)
+        {
+            spawn = GameObject.FindWithTag("Spawn");
+        }
     }
-
-    private void OnDeath()
-    {
-        Destroy(eRef.gameObject);
-    }
-
-
 }
