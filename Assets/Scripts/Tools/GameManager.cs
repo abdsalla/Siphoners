@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-
     public static GameManager Instance { get { return instance; } }
     public IUVSensor sensor;
     public GameObject player;
@@ -31,6 +31,14 @@ public class GameManager : MonoBehaviour
         sensor = GetComponent<IUVSensor>();
         cameraFollow = main.GetComponent<CameraFollow>();
     }
+
+    void Start()
+    {
+        currentPlayer = Instantiate(player, spawn.transform.position, spawn.transform.rotation).GetComponentInChildren<PlayerMovement>().gameObject;
+        eRef = instance.currentPlayer.GetComponent<Energy>();    
+
+    }
+
     void Update()
     {
         if (currentPlayer == null)

@@ -25,8 +25,7 @@ public class Lantern : MonoBehaviour
     lightParticle = lightGameObject.GetComponent<ParticleSystem>();
     var lights = lightParticle.lights;
     lightComp.color = Color.yellow;
-    isOn = true;
-    
+    isOn = true; 
     }
 
     void Update()
@@ -69,7 +68,6 @@ public class Lantern : MonoBehaviour
     {
         Debug.Log("Solar Charged");
         lightComp.intensity = 7;
-
     }
 
     void SolarRevert()
