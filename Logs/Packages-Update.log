@@ -78,10 +78,14 @@ The following packages were added:
   com.unity.modules.xr@1.0.0
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 === Tue Sep 17 20:42:55 2019
 =======
 === Fri Sep 27 13:16:24 2019
 >>>>>>> player-attacks
+=======
+=== Tue Sep 17 20:42:55 2019
+>>>>>>> develop
 
 Packages were changed.
 Update Mode: updateDependencies

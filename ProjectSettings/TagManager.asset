@@ -7,7 +7,6 @@ TagManager:
   - Scent
   - Inventory
   - Fog
-  - Enemy
   layers:
   - Default
   - TransparentFX
