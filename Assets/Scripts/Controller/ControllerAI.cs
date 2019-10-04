@@ -42,9 +42,9 @@ public class ControllerAI : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        if(player == null){player = playerSpawn.currentPlayer;}
+        if(instance.player == null){instance.player = instance.currentPlayer;}
         //if(eRef == null){eRef = player.GetComponent<Energy>();}
-        if (Vector3.Distance(player.transform.localPosition, tf.position) <= sightRadius)
+        if (Vector3.Distance(instance.player.transform.localPosition, tf.position) <= sightRadius)
         {
             GetComponent<ControllerAI1>().enabled = false;
             agent.SetDestination(instance.currentPlayer.transform.position);
