@@ -4,18 +4,17 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    [SerializeField]
-    public Transform target;
-   
-
-    [SerializeField]
-    private Vector3 offsetPosition;
-
-    [SerializeField]
+    private Transform target;
+    private Vector3 offsetPosition;=
     private Space offsetPositionSpace = Space.Self;
-
-    [SerializeField]
     private bool lookAt = true;
+    private GameManager instance;
+
+    private void OnEnable()
+    {
+        instance = GameManager.Instance;
+        target = instance.currentPlayer.transform;
+    }
 
     private void LateUpdate()
     {

@@ -17,12 +17,6 @@ public class FogDissipate : MonoBehaviour
         fog = fogEmitter.GetComponent<ParticleSystem>();
     }
 
-    void Update()
-    {
-        this.transform.position = instance.currentPlayer.transform.position;
-    }
-
-   
     void OnParticleCollision(GameObject fogEmitter)
     {
 

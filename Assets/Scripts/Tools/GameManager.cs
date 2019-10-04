@@ -6,13 +6,14 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get { return instance; } }
-    public IUVSensor sensor;
+    
     public GameObject player;
     public GameObject currentPlayer;
     public Camera main;
     public CameraFollow cameraFollow;
     public GameObject spawn;
 
+    //private IUVSensor sensor;
     private Energy eRef;
     private static GameManager instance;
 
@@ -28,7 +29,7 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
         }
 
-        sensor = GetComponent<IUVSensor>();
+        //sensor = GetComponent<IUVSensor>();
         cameraFollow = main.GetComponent<CameraFollow>();
     }
 
@@ -53,7 +54,7 @@ public class GameManager : MonoBehaviour
             eRef.healthBar.fillAmount = 0;
             eRef.currentHealth = 0;
         }
-        sensor.GetUVValue();
+        //sensor.GetUVValue();
 
         if (spawn == null)
         {
