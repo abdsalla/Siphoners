@@ -10,6 +10,8 @@ public class ControllerAI : MonoBehaviour
     public Transform tf;
     public float turnSpeed;
     private NavMeshAgent agent;     //The NavMesh Component
+    private Energy eRef;
+    public int hp;              //The Health Component
 
     //Temp
     public int baseDamage = 10;
@@ -33,8 +35,16 @@ public class ControllerAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(instance.player == null){instance.player = instance.currentPlayer;}
-        if (Vector3.Distance(instance.currentPlayer.transform.localPosition, tf.position) <= sightRadius)
+
+        // Destroys the enemy if its health drops to 0
+        if(hp <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+
+        if(player == null){player = playerSpawn.currentPlayer;}
+        //if(eRef == null){eRef = player.GetComponent<Energy>();}
+        if (Vector3.Distance(player.transform.localPosition, tf.position) <= sightRadius)
         {
             GetComponent<ControllerAI1>().enabled = false;
             agent.SetDestination(instance.currentPlayer.transform.position);

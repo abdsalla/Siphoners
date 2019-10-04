@@ -66,6 +66,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tf: {fileID: 0}
   turnSpeed: 10
+  hp: 3
   zombieDamage: 10
   targetDistance: 0
   playerSpawn: {fileID: 0}
