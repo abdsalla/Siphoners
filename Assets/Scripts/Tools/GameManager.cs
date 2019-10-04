@@ -9,8 +9,8 @@ public class GameManager : MonoBehaviour
     
     public GameObject player;
     public GameObject currentPlayer;
-    public Camera main;
-    public CameraFollow cameraFollow;
+   // public Camera main;
+    //public CameraFollow cameraFollow;
     public GameObject spawn;
 
     //private IUVSensor sensor;
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
         }
 
         //sensor = GetComponent<IUVSensor>();
-        cameraFollow = main.GetComponent<CameraFollow>();
+        //cameraFollow = main.GetComponent<CameraFollow>();
     }
 
     void Start()
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
         {
             currentPlayer = Instantiate(player, spawn.transform.position, spawn.transform.rotation).GetComponentInChildren<PlayerMovement>().gameObject;
             Debug.Log("Player Instantiated");
-            cameraFollow.target = currentPlayer.GetComponent<HumanData>().viewPoint;
+            //cameraFollow.target = currentPlayer.GetComponent<HumanData>().viewPoint;
         }
 
         if (eRef.healthBar.fillAmount <= 0 && eRef.currentHealth <= 0)
