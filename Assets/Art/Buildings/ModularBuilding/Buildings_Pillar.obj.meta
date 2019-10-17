@@ -3,7 +3,12 @@ guid: a5af4b2ce8ad2cd4293e0f05d0eeb12e
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: polySurface54Mat
+    second: {fileID: 2100000, guid: 88c60ea01a4f4b341a75090e503c5ef6, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -42,7 +47,7 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
-    swapUVChannels: 0
+    swapUVChannels: 1
     generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0

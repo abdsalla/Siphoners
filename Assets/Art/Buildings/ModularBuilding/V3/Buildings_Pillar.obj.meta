@@ -3,10 +3,15 @@ guid: e9ad13bd7d441d7408f4dffa21533832
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Buildings_Pillar_polySurface54Mat
+    second: {fileID: 2100000, guid: 88c60ea01a4f4b341a75090e503c5ef6, type: 2}
   materials:
     importMaterials: 1
-    materialName: 0
+    materialName: 1
     materialSearch: 1
     materialLocation: 1
   animations:
