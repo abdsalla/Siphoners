@@ -17,10 +17,10 @@ public class ControllerAI : MonoBehaviour
     public int baseDamage = 10;
     public float targetDistance;    //Distance from the AI to the player to stop at
     public float sightRadius = 20;
-    private Vector3 input;
-    public Animator anim;
+    
+    
 
-    private GameManager instance;
+    /*
 
     // Start is called before the first frame update
     void Start()
@@ -36,11 +36,6 @@ public class ControllerAI : MonoBehaviour
     void Update()
     {
 
-        // Destroys the enemy if its health drops to 0
-        if(hp <= 0)
-        {
-            Destroy(this.gameObject);
-        }
 
         if(instance.player == null){instance.player = instance.currentPlayer;}
         //if(eRef == null){eRef = player.GetComponent<Energy>();}
@@ -55,30 +50,8 @@ public class ControllerAI : MonoBehaviour
         {
             GetComponent<ControllerAI1>().enabled = true;
         }
-        input = agent.desiredVelocity;
-        input = transform.InverseTransformDirection(input);
-        anim.SetFloat("Horizontal", input.x);
-        anim.SetFloat("Vertical", input.z);
+        
     }
 
-    public void RotateTowards(Vector3 targetPoint)
-    {
-        //Find the Difference Between the Pawn and What We Want to Look At
-        Vector3 vectorToLookDown = targetPoint - tf.position;
-        //Get the Rotation
-        Quaternion lookRotation = Quaternion.LookRotation(vectorToLookDown, tf.up);
-        //Look There
-        tf.rotation = Quaternion.RotateTowards(tf.rotation, lookRotation, turnSpeed * Time.deltaTime);
-    }
-
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        //simple temp kill mechanic 
-        if (collision.gameObject == instance.currentPlayer)
-        {
-            Debug.Log("Dealt Damage");
-            //Destroy(player.gameObject);
-        }
-    }
+    */
 }

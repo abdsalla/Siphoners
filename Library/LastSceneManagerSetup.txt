@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> develop
 - path: Assets/Scenes/Level1/Level1.1.unity
   isLoaded: 1
   isActive: 1
@@ -11,12 +7,3 @@ sceneSetups:
   isLoaded: 1
   isActive: 0
   isSubScene: 0
-<<<<<<< HEAD
-=======
-- path: Assets/Scenes/Test/TestAttacks.unity
-  isLoaded: 1
-  isActive: 1
-  isSubScene: 0
->>>>>>> player-attacks
-=======
->>>>>>> develop
