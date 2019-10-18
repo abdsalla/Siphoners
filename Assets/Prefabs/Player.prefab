@@ -258,19 +258,6 @@ MonoBehaviour:
   chargeRate: 1
   energyBar: {fileID: 3554187060234162438}
   healthBar: {fileID: 6712308255525819867}
---- !u!114 &318233849918112360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 342707101601174675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 749ae5f9df9c3824c9a40c6001f55e82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  viewPoint: {fileID: 4977315941380123156}
 --- !u!1 &2077514572255270955
 GameObject:
   m_ObjectHideFlags: 0
@@ -7889,16 +7876,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 342707101601174677}
     m_Modifications:
-    - target: {fileID: 8642953637439014536, guid: b6b84a3de5a6359478f6602f19ebffd1,
-        type: 3}
-      propertyPath: m_Name
-      value: Player_Camera
-      objectReference: {fileID: 0}
-    - target: {fileID: 8642953637439014538, guid: b6b84a3de5a6359478f6602f19ebffd1,
-        type: 3}
-      propertyPath: m_ClearFlags
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8642953637439014539, guid: b6b84a3de5a6359478f6602f19ebffd1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7953,6 +7930,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8642953637439014536, guid: b6b84a3de5a6359478f6602f19ebffd1,
+        type: 3}
+      propertyPath: m_Name
+      value: Player_Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 8642953637439014538, guid: b6b84a3de5a6359478f6602f19ebffd1,
+        type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8642953637439014540, guid: b6b84a3de5a6359478f6602f19ebffd1,
         type: 3}
