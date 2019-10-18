@@ -162,6 +162,7 @@ public class ControllerAI1 : MonoBehaviour
         if (angle < fieldofViewAngle * 0.5f)
         {
             RaycastHit hit;
+            Debug.DrawRay(transform.position, transform.forward, Color.red);
 
             if (Physics.Raycast(transform.position, direction.normalized, out hit, losRadius))
             {
