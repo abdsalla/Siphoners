@@ -1,4 +1,5 @@
 sceneSetups:
+<<<<<<< Updated upstream
 - path: Assets/Scenes/Level1/Level1.1.unity
   isLoaded: 1
   isActive: 1
@@ -7,3 +8,9 @@ sceneSetups:
   isLoaded: 1
   isActive: 0
   isSubScene: 0
+=======
+- path: Assets/Scenes/Test/WallCreeperTesting.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
+>>>>>>> Stashed changes

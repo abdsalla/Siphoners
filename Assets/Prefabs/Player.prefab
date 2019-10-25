@@ -130,9 +130,7 @@ GameObject:
   - component: {fileID: 433081169930732168}
   - component: {fileID: 9209902116299170180}
   - component: {fileID: 8930132797999891006}
-  - component: {fileID: 318233849918112360}
-  - component: {fileID: 7842236225660301274}
-  - component: {fileID: 4553523787334945134}
+  - component: {fileID: 1976400946294493120}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -157,6 +155,7 @@ Transform:
   - {fileID: 7082872422687015208}
   - {fileID: 4977315941380123156}
   - {fileID: 151705469}
+  - {fileID: 8441900665890642932}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -254,14 +253,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a00ed4fcca916a147b8be89efda6ccc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chargeRate: 1
   solarCharged: 0
   additionalCost: 2
-  chargeRate: 1
-  maxHealth: 100
-  maxEnergy: 100
-  energyBar: {fileID: 0}
-  healthBar: {fileID: 0}
---- !u!114 &318233849918112360
+  energyBar: {fileID: 3554187060234162438}
+  healthBar: {fileID: 6712308255525819867}
+--- !u!114 &1976400946294493120
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -270,43 +267,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 342707101601174675}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 749ae5f9df9c3824c9a40c6001f55e82, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e7eea742a5136d45b40e495fea777cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewPoint: {fileID: 4977315941380123156}
---- !u!95 &7842236225660301274
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 342707101601174675}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0c44cbd36e3f591459bd3256d4eac100, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 1
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4553523787334945134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 342707101601174675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8452682d673298e45bf4d49d0f22bae4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 7842236225660301274}
---- !u!1 &961979142079240094
+  playerDamage: 1
+  attackTime: 1
+  attackBox: {fileID: 1175213878668168466, guid: 810c4406f9be6d748a0f2341e5f342f2,
+    type: 3}
+  attackPoint: {fileID: 8441900665890642932}
+--- !u!1 &2077514572255270955
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -562,6 +531,36 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &3879287019183666879
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8441900665890642932}
+  m_Layer: 0
+  m_Name: AttackPoint(Temp)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8441900665890642932
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3879287019183666879}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.278, z: 0.358}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 342707101601174677}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3880226323344317353
 GameObject:
   m_ObjectHideFlags: 0

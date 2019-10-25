@@ -11,8 +11,10 @@ public class EnemyAi : MonoBehaviour
     public float losRadius = 45f;
 
     //temp
-    //public Transform player;
+    public Transform player;
     public Transform tf;
+
+    public int health;
 
     //ai hearing
     Vector3 noisePosition;
@@ -63,6 +65,7 @@ public class EnemyAi : MonoBehaviour
     void Update()
     {
         float distance = Vector3.Distance(PlayerMovement.playerPos, transform.position);
+        Debug.Log(distance);
         {
             if (playerIsInLOS == false && aiHeardPlayer == false)
             {
@@ -182,7 +185,12 @@ public class EnemyAi : MonoBehaviour
 
         if (distance <= chaseRadius && distance > distToPlayer)
         {
-            Agent.SetDestination(PlayerMovement.playerPos);
+            Debug.Log(distance);
+            if(distance < 30)
+            {
+                Agent.SetDestination(PlayerMovement.playerPos);
+            }
+            
         }
 
     }

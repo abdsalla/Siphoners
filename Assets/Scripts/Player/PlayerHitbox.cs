@@ -39,7 +39,16 @@ public class PlayerHitbox : MonoBehaviour
         else if (other.tag == "Enemy")
         {
             Debug.Log("Hurt that enemy!");
-            other.gameObject.GetComponent<ControllerAI>().hp -= playerAttack.playerDamage;
+            other.gameObject.GetComponent<EnemyAi>().health -= playerAttack.playerDamage;
+
+            if(other.gameObject.GetComponent<EnemyAi>().health <= 0)
+            {
+                Destroy(other.gameObject);
+            } else
+            {
+                // Do nothing
+            }
+
             Destroy(this.gameObject);
         }
         
