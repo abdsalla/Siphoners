@@ -21,7 +21,6 @@ public class nodeSpawner : MonoBehaviour
     {
         scentNode.Add(spawn); //add to list 
         scentListSize = scentNode.Count; 
-        Debug.Log(scentListSize); //too see if list is increasing
     }
     GameObject FindObjectWithScent()//trying to add node to list 
     {

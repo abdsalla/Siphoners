@@ -43,8 +43,6 @@ public class ControllerAI1 : MonoBehaviour
     private float waitStrafeTime;
     public float t_minStrafe;
     public float t_maxStrafe;
-
-    //strafe
     public Transform strafeRight;
     public Transform strafeLeft;
     private int randomStrafeDir;

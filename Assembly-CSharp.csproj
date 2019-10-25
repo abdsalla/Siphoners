@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Animations\TestMovement.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Misc\HueCube.cs" />
@@ -161,9 +162,12 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/benchout/Desktop/Studio/Siphoners/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
     <Reference Include="com.unity.multiplayer-hlapi.Editor">
       <HintPath>C:/Users/benchout/Desktop/Studio/Siphoners/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
     </Reference>
+=======
+>>>>>>> Animations
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>C:/Users/benchout/Desktop/Studio/Siphoners/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
@@ -182,12 +186,15 @@
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>C:/Users/benchout/Desktop/Studio/Siphoners/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
     <Reference Include="com.unity.multiplayer-weaver.Editor">
       <HintPath>C:/Users/benchout/Desktop/Studio/Siphoners/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
       <HintPath>C:/Users/benchout/Desktop/Studio/Siphoners/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
+=======
+>>>>>>> Animations
     <Reference Include="Unity.Rider.Editor">
       <HintPath>C:/Users/benchout/Desktop/Studio/Siphoners/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
@@ -196,12 +203,15 @@
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
       <HintPath>C:/Users/benchout/Desktop/Studio/Siphoners/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+<<<<<<< HEAD
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
       <HintPath>C:/Users/benchout/Desktop/Studio/Siphoners/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>C:/Users/benchout/Desktop/Studio/Siphoners/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+=======
+>>>>>>> Animations
     </Reference>
     <Reference Include="Unity.ProBuilder.AddOns.Editor">
       <HintPath>C:/Users/benchout/Desktop/Studio/Siphoners/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
@@ -212,6 +222,7 @@
     <Reference Include="Unity.Analytics.DataPrivacy">
       <HintPath>C:/Users/benchout/Desktop/Studio/Siphoners/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
       <HintPath>C:/Users/benchout/Desktop/Studio/Siphoners/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
@@ -220,6 +231,10 @@
     </Reference>
     <Reference Include="com.unity.multiplayer-hlapi.Runtime">
       <HintPath>C:/Users/benchout/Desktop/Studio/Siphoners/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+=======
+    <Reference Include="UnityEditor.UI">
+      <HintPath>C:/Users/benchout/Desktop/Studio/Siphoners/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+>>>>>>> Animations
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity 2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
