@@ -43,8 +43,6 @@ public class ControllerAI1 : MonoBehaviour
     private float waitStrafeTime;
     public float t_minStrafe;
     public float t_maxStrafe;
-
-    //strafe
     public Transform strafeRight;
     public Transform strafeLeft;
     private int randomStrafeDir;
@@ -162,6 +160,7 @@ public class ControllerAI1 : MonoBehaviour
         if (angle < fieldofViewAngle * 0.5f)
         {
             RaycastHit hit;
+            Debug.DrawRay(transform.position, transform.forward, Color.red);
 
             if (Physics.Raycast(transform.position, direction.normalized, out hit, losRadius))
             {
@@ -183,19 +182,22 @@ public class ControllerAI1 : MonoBehaviour
 
     void Patrol() //Patrol state for AI goes to set waypoints. 
     {
-        nav.SetDestination(moveSpots[randomSpot].position);
-
-        if (Vector3.Distance(transform.position, moveSpots[randomSpot].position) < 2.0f)
+        if (moveSpots.Length <= 0)
         {
-            if (waitTime <= 0)
-            {
-                randomSpot = Random.Range(0, moveSpots.Length);
+            nav.SetDestination(moveSpots[randomSpot].position);
 
-                waitTime = startWaitTime;
-            }
-            else
+            if (Vector3.Distance(transform.position, moveSpots[randomSpot].position) < 2.0f)
             {
-                waitTime -= Time.deltaTime;
+                if (waitTime <= 0)
+                {
+                    randomSpot = Random.Range(0, moveSpots.Length);
+
+                    waitTime = startWaitTime;
+                }
+                else
+                {
+                    waitTime -= Time.deltaTime;
+                }
             }
         }
     }

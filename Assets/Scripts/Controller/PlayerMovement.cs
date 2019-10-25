@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 //Temp
@@ -49,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
             var forward = transform.TransformDirection(Vector3.forward);
             float curSpeed = Speed * Input.GetAxis("Vertical") /** * Time.deltaTime**/;
             controller.SimpleMove(forward * curSpeed); //simple move for char 
+            playerPos = this.transform.position;
         }
         //JumpInput(); //calls jump functions
     }

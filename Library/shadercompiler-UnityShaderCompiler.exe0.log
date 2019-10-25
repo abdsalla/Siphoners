@@ -1,2 +1,105 @@
+<<<<<<< HEAD
 Base path: C:/Program Files/Unity/Editor/Data
 Cmd: initializeCompiler
+=======
+<<<<<<< Updated upstream
+Base path: 'C:/Program Files/Unity 2019.2.2f1/Editor/Data', plugins path 'C:/Program Files/Unity 2019.2.2f1/Editor/Data/PlaybackEngines'
+Cmd: initializeCompiler
+<<<<<<< HEAD
+Cmd: preprocess
+  insize=5130 outsize=3777 ok=1
+Cmd: preprocess
+  insize=808 outsize=361 ok=1
+Cmd: preprocess
+  insize=3608 outsize=1262 ok=1
+Cmd: preprocess
+  insize=1697 outsize=1219 ok=1
+Cmd: preprocess
+  insize=3652 outsize=1674 ok=1
+Cmd: preprocess
+  insize=737 outsize=737 ok=1
+Cmd: preprocess
+  insize=1296 outsize=571 ok=1
+Cmd: preprocess
+  insize=1116 outsize=535 ok=1
+Cmd: preprocess
+  insize=1307 outsize=459 ok=1
+Cmd: preprocess
+  insize=440 outsize=437 ok=1
+Cmd: preprocess
+  insize=1339 outsize=1498 ok=1
+Cmd: preprocess
+  insize=1003 outsize=496 ok=1
+Cmd: preprocess
+  insize=1144 outsize=479 ok=1
+Cmd: preprocess
+  insize=1290 outsize=380 ok=1
+Cmd: preprocess
+  insize=22803 outsize=3829 ok=1
+Cmd: preprocess
+  insize=3658 outsize=735 ok=1
+Cmd: preprocess
+  insize=3606 outsize=1310 ok=1
+Cmd: preprocess
+  insize=542 outsize=1332 ok=1
+Cmd: preprocess
+  insize=10876 outsize=4002 ok=1
+Cmd: preprocess
+  insize=1476 outsize=492 ok=1
+Cmd: preprocess
+  insize=1123 outsize=1456 ok=1
+Cmd: preprocess
+  insize=1052 outsize=334 ok=1
+Cmd: preprocess
+  insize=879 outsize=419 ok=1
+Cmd: preprocess
+  insize=3615 outsize=2669 ok=1
+Cmd: preprocess
+  insize=1119 outsize=466 ok=1
+Cmd: preprocess
+  insize=4062 outsize=762 ok=1
+Cmd: preprocess
+  insize=514 outsize=1317 ok=1
+Cmd: preprocess
+  insize=605 outsize=247 ok=1
+Cmd: preprocess
+  insize=7378 outsize=2494 ok=1
+Cmd: preprocess
+  insize=1411 outsize=396 ok=1
+Cmd: preprocess
+  insize=853 outsize=463 ok=1
+Cmd: preprocess
+  insize=8019 outsize=2766 ok=1
+Cmd: preprocess
+  insize=1073 outsize=474 ok=1
+Cmd: preprocess
+  insize=2185 outsize=535 ok=1
+Cmd: preprocess
+  insize=1545 outsize=430 ok=1
+Cmd: preprocess
+  insize=1169 outsize=469 ok=1
+Cmd: preprocess
+  insize=3207 outsize=1205 ok=1
+Cmd: preprocess
+  insize=2420 outsize=1129 ok=1
+Cmd: preprocess
+  insize=843 outsize=297 ok=1
+Cmd: preprocess
+  insize=5198 outsize=3811 ok=1
+Cmd: preprocess
+  insize=2249 outsize=589 ok=1
+Cmd: preprocess
+  insize=952 outsize=382 ok=1
+Cmd: preprocess
+  insize=10402 outsize=3992 ok=1
+Cmd: preprocess
+  insize=1490 outsize=445 ok=1
+Cmd: preprocess
+  insize=4453 outsize=3687 ok=1
+Cmd: preprocess
+  insize=1614 outsize=417 ok=1
+Cmd: preprocess
+  insize=7870 outsize=2504 ok=1
+=======
+>>>>>>> Animations
+>>>>>>> develop

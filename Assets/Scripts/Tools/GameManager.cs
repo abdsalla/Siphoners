@@ -1,46 +1,64 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
-    public IUVSensor sensor;
+    public static GameManager Instance { get { return instance; } }
+    
+    public GameObject player;
+    public GameObject currentPlayer;
+   // public Camera main;
+    //public CameraFollow cameraFollow;
+    public GameObject spawn;
 
-
+    //private IUVSensor sensor;
     private Energy eRef;
-
+    private static GameManager instance;
 
     void Awake()
     {
-        if (instance == null)
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
         {
             instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
-        else
-        {
-            Destroy(this.gameObject);
-        }
 
-        sensor = GetComponent<IUVSensor>();
+        //sensor = GetComponent<IUVSensor>();
+        //cameraFollow = main.GetComponent<CameraFollow>();
+    }
+
+    void Start()
+    {
+        currentPlayer = Instantiate(player, spawn.transform.position, spawn.transform.rotation).GetComponentInChildren<PlayerMovement>().gameObject;
+        eRef = instance.currentPlayer.GetComponent<Energy>();    
 
     }
+
     void Update()
     {
-        if (eRef.healthBar.value <= 0 && eRef.currentHealth <= 0)
+        if (currentPlayer == null)
         {
-            eRef.healthBar.value = 0;
-            eRef.currentHealth = 0;
-            OnDeath();
+            currentPlayer = Instantiate(player, spawn.transform.position, spawn.transform.rotation).GetComponentInChildren<PlayerMovement>().gameObject;
+            Debug.Log("Player Instantiated");
+            //cameraFollow.target = currentPlayer.GetComponent<HumanData>().viewPoint;
         }
-        sensor.GetUVValue();
+
+        if (eRef.healthBar.fillAmount <= 0 && eRef.currentHealth <= 0)
+        {
+            eRef.healthBar.fillAmount = 0;
+            eRef.currentHealth = 0;
+        }
+        //sensor.GetUVValue();
+
+        if (spawn == null)
+        {
+            spawn = GameObject.FindWithTag("Spawn");
+        }
     }
-
-    private void OnDeath()
-    {
-        Destroy(eRef.gameObject);
-    }
-
-
 }

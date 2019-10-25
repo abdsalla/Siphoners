@@ -16,31 +16,30 @@ public class Lantern : MonoBehaviour
     private Energy energyRef;
 
 
-    void Start()
+    void OnEnable()
     {
     lightComp = lightGameObject.GetComponent<Light>();
-    //lightComp.type = LightType.Spot;
-    //lightComp.lightmapBakeType = LightmapBakeType.Realtime;
+    lightComp.type = LightType.Spot;
+    lightComp.lightmapBakeType = LightmapBakeType.Realtime;
     energyRef = playerReference.GetComponent<Energy>();
     lightParticle = lightGameObject.GetComponent<ParticleSystem>();
     var lights = lightParticle.lights;
-    //lightComp.color = Color.yellow;
-    isOn = true;
-    
+    lightComp.color = Color.yellow;
+    isOn = true; 
     }
 
     void Update()
     {
-       // Debug.Log("energyRef.solarCharged = " + energyRef.solarCharged);
-        if (energyRef.energyBar.value > 0 && isOn == true)
+        //Debug.Log("energyRef.solarCharged = " + energyRef.solarCharged);
+        if (energyRef.energyBar.fillAmount > 0 && isOn == true)
         {
             energyRef.UseEnergy(energyDepletionRate);
         }
-        else if (energyRef.energyBar.value <= 0 && isOn == true)
+        else if (energyRef.energyBar.fillAmount <= 0 && isOn == true)
         {
             TurnOff();
         }
-        else if (energyRef.energyBar.value > 0 && isOn == false)
+        else if (energyRef.energyBar.fillAmount > 0 && isOn == false)
         {
             TurnOn();
         }
@@ -68,13 +67,12 @@ public class Lantern : MonoBehaviour
     void SolarCharged()
     {
         Debug.Log("Solar Charged");
-       // lightComp.intensity = 7;
-
+        lightComp.intensity = 7;
     }
 
     void SolarRevert()
     {
-       // lightComp.intensity = 1;
+        lightComp.intensity = 1;
     }
 
 }

@@ -4,21 +4,31 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    [SerializeField]
     public Transform target;
-   
-
-    [SerializeField]
-    private Vector3 offsetPosition;
-
-    [SerializeField]
+    public Vector3 offsetPosition;
     private Space offsetPositionSpace = Space.Self;
-
-    [SerializeField]
     private bool lookAt = true;
+    private GameManager instance;
 
+    private void OnEnable()
+    {
+        instance = GameManager.Instance;
+     
+    }
+
+    private void Start()
+    {
+        instance = GameManager.Instance;
+        Debug.Log(instance);
+        
+    }
+    private void Update()
+    {
+        target = instance.currentPlayer.transform;
+    }
     private void LateUpdate()
     {
+        Debug.Log(instance);
         Refresh();
     }
 
@@ -38,7 +48,7 @@ public class CameraFollow : MonoBehaviour
         }
         else
         {
-            transform.position = target.position + offsetPosition;
+            transform.position = offsetPosition;
         }
 
         // compute rotation

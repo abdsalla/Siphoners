@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3948077762328172307}
   - component: {fileID: 3948077762328172308}
   - component: {fileID: 8264437471978355923}
+  - component: {fileID: 3131059191104720923}
   m_Layer: 0
   m_Name: Zombie 1
   m_TagString: Untagged
@@ -66,11 +67,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tf: {fileID: 0}
   turnSpeed: 10
-  zombieDamage: 10
+  hp: 3
+  baseDamage: 10
   targetDistance: 0
-  playerSpawn: {fileID: 0}
-  player: {fileID: 0}
-  anim: {fileID: 0}
   sightRadius: 20
 --- !u!114 &3948077762328172307
 MonoBehaviour:
@@ -79,7 +78,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3948077762328172304}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b97bbae617380440856d4c03e9de6f7, type: 3}
   m_Name: 
@@ -141,6 +140,32 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &3131059191104720923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3948077762328172304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3616815718a0dea45bd65f1332f34e34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerIsInLOS: 0
+  fieldofViewAngle: 160
+  losRadius: 45
+  tf: {fileID: 0}
+  noiseTravelDistance: 50
+  spinspeed: 3
+  spinTime: 3
+  moveSpots: []
+  Agent: {fileID: 0}
+  startWaitTime: 1
+  distToPlayer: 5
+  chaseRadius: 20
+  facePlayerFactor: 20
+  anim: {fileID: 0}
 --- !u!1001 &1346399545969072940
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -153,11 +178,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie1_Model (1)
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 0a2434bc3e8d58943963e9d65b64758f,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: be539a60198938244bb6c846218598b0, type: 2}
     - target: {fileID: -4216859302048453862, guid: 0a2434bc3e8d58943963e9d65b64758f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -213,6 +233,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 0a2434bc3e8d58943963e9d65b64758f,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: be539a60198938244bb6c846218598b0, type: 2}
     - target: {fileID: -768879239539349595, guid: 0a2434bc3e8d58943963e9d65b64758f,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

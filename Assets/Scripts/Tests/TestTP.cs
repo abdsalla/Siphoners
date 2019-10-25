@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class TestTP : MonoBehaviour
 {
-    public GameObject player;
+    private GameManager instance;
     private PlayerMovement movement;
-    public TestSpawn spawn;
+
     public List<KeyCode> keys;
     public List<Transform> transforms;
 
     void Start()
     {
-        movement = player.GetComponent<PlayerMovement>();
+        instance = GameManager.Instance;
+        movement = instance.currentPlayer.GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (player == null)
+        if (instance.currentPlayer == null)
         {
-            player = spawn.currentPlayer;
-            movement = player.GetComponent<PlayerMovement>();
+            movement = instance.currentPlayer.GetComponent<PlayerMovement>();
         }
 
         if(Input.anyKey)
@@ -31,7 +31,7 @@ public class TestTP : MonoBehaviour
                 if (Input.GetKeyDown(keys[i]))
                 {
                     movement.enabled = false;
-                    player.transform.position = transforms[i].position;
+                    instance.currentPlayer.transform.position = transforms[i].position;
                     movement.enabled = true;
                 }
             }

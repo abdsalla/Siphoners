@@ -6,27 +6,39 @@ public class PlayerAttack : MonoBehaviour
 {
     private Energy energyRef;
 
-    public GameObject enemyRef;
-    public float playerDamage;
-    public float chargeAttackValue;
+    //public GameObject enemyRef;
+    public int playerDamage;
+    //public float chargeAttackValue;
+    public int attackTime;
+
+    private ControllerAI enemy;
+
+    public GameObject attackBox;
+
+    public Transform attackPoint;
 
     void Awake()
     {
         energyRef = GetComponent<Energy>();
     }
 
-    void Start()
-    {
-        
-    }
-
+    // If you press down K, then it calls the Attack function.
     void Update()
     {
-        if (Input.GetKey(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.K))
         {
-
-            chargeAttackValue = energyRef.ReceiveDamage(playerDamage);
-
+            Debug.Log("Pressed K to attack");
+            Attack();
         }
+    }
+
+    // When called, it instaniates an attack box in front of the player.
+    void Attack()
+    {
+
+        energyRef.currentEnergy -= 10f;
+
+        Instantiate(attackBox, attackPoint);
+
     }
 }

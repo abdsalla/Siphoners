@@ -18,10 +18,12 @@ public class PickUp_Item : PickUp
         
     }
 
-   /* protected override void OnPickUp(PlayerMovement player)
+    protected override void OnPickUp(PlayerMovement player)
     {
+        InventoryManager.instance.Add(item);
+        Destroy(gameObject);
         //player.GetComponent<Inventory>().AddItem(item);
-        base.OnPickUp(player);
+        //base.OnPickUp(player);
     }
-    */
+    
 }
