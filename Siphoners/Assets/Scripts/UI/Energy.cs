@@ -110,7 +110,7 @@ public class Energy : MonoBehaviour
 
 
     // Player damage received
-    public float ReceiveDamage (float damageValue)
+    public void ReceiveDamage (float damageValue)
     {
         currentHealth -= damageValue;
         //If the current health is less than 0, set it to zero so it doesn't go under
@@ -120,7 +120,7 @@ public class Energy : MonoBehaviour
     }
  
     //Player damage replenish
-    public float HealDamage (float healValue)
+    public void HealDamage (float healValue)
     {
         currentHealth += healValue;
         //If current health is more than the max health set it to max so it doesn't go over
