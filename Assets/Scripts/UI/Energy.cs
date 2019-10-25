@@ -116,21 +116,20 @@ public class Energy : MonoBehaviour
     public float ReceiveDamage (float damageValue)
     {
         currentHealth -= damageValue;
-        healthBar.fillAmount = CalculateHealth();
         //If the current health is less than 0, set it to zero so it doesn't go under
         if (currentHealth < 0) currentHealth = 0;
+        healthBar.fillAmount = CalculateHealth();
         //if (currentHealth == 0) gameObject.SetActive(false);
-        return currentHealth;
     }
  
     //Player damage replenish
     public float HealDamage (float healValue)
     {
         currentHealth += healValue;
-        healthBar.fillAmount = CalculateHealth();
         //If current health is more than the max health set it to max so it doesn't go over
         if (currentHealth > maxHealth) currentHealth = maxHealth;
-        return currentHealth;
+        healthBar.fillAmount = CalculateHealth();
+        
     }
 
     //Health percentage is currenthealth divided by maxhealth
