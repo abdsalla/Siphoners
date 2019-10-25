@@ -20,6 +20,9 @@ public class WallCreeperController : MonoBehaviour
     public bool inWall;
     public bool isCrying;
 
+    // Collider variable used to check if Wall Creeper is inside a wall
+    public Collider wallTouch;
+
     private void Awake()
     {
         nav = GetComponent<NavMeshAgent>();
@@ -37,6 +40,22 @@ public class WallCreeperController : MonoBehaviour
     void Update()
     {
         Patrol();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Wall")
+        {
+            inWall = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "Wall")
+        {
+            inWall = false;
+        }
     }
 
     void Patrol() //Patrol state for AI goes to set waypoints. 
@@ -58,12 +77,18 @@ public class WallCreeperController : MonoBehaviour
         }
     }
 
+    void StretchAttack()
+    {
+
+
+
+    }
 
 
     /*
     ***IDEAS FOR HOW TO HANDLE THE WALL CREEPER***
 
-    Have a variable that handles whether or not the creeper is in a wall, that will handle whether or not it can be damaged
+    Have a variable that handles whether or not the creeper is in a wall, that will handle whether or not it can be damaged AND combined with a reach if it will do the stretch attack
     
     Use the same setup for sight and all of that as the zombo and werewolfboyo, but also add in a wall reach variable to check if a player could be attacked from inside the wall
 
