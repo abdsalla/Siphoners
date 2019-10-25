@@ -16,6 +16,9 @@ public class WallCreeperController : MonoBehaviour
 
     private float waitTime;
 
+    // Health points
+    public int health;
+
     // Boolean variables to control whether or not the WallCreeper has its certain special actions
     public bool inWall;
     public bool isCrying;
