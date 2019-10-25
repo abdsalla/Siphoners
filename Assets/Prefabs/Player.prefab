@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 433081169930732168}
   - component: {fileID: 9209902116299170180}
   - component: {fileID: 8930132797999891006}
+  - component: {fileID: 1976400946294493120}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -257,6 +258,23 @@ MonoBehaviour:
   additionalCost: 2
   energyBar: {fileID: 3554187060234162438}
   healthBar: {fileID: 6712308255525819867}
+--- !u!114 &1976400946294493120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342707101601174675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e7eea742a5136d45b40e495fea777cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerDamage: 1
+  attackTime: 1
+  attackBox: {fileID: 1175213878668168466, guid: 810c4406f9be6d748a0f2341e5f342f2,
+    type: 3}
+  attackPoint: {fileID: 8441900665890642932}
 --- !u!1 &2077514572255270955
 GameObject:
   m_ObjectHideFlags: 0
@@ -7236,15 +7254,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 429bbc71214ec2e44a96594b563b2357, type: 3}
---- !u!4 &8505371100974475397 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 429bbc71214ec2e44a96594b563b2357,
-    type: 3}
-  m_PrefabInstance: {fileID: 3707466611413566367}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4634903491110902422 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 429bbc71214ec2e44a96594b563b2357,
+    type: 3}
+  m_PrefabInstance: {fileID: 3707466611413566367}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8505371100974475397 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 429bbc71214ec2e44a96594b563b2357,
     type: 3}
   m_PrefabInstance: {fileID: 3707466611413566367}
   m_PrefabAsset: {fileID: 0}
