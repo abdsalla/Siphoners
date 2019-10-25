@@ -80,6 +80,7 @@ The following packages were added:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 === Tue Sep 17 20:42:55 2019
 =======
 === Fri Sep 27 13:16:24 2019
@@ -90,6 +91,9 @@ The following packages were added:
 =======
 === Fri Sep 13 16:38:44 2019
 >>>>>>> Animations
+=======
+=== Fri Oct  4 12:42:50 2019
+>>>>>>> origin/feature/Level1.1
 
 Packages were changed.
 Update Mode: updateDependencies
@@ -100,10 +104,14 @@ The following packages were added:
   com.unity.test-framework@1.0.13
   com.unity.2d.sprite@1.0.0
 <<<<<<< HEAD
+<<<<<<< HEAD
   com.unity.ide.vscode@1.1.0
 =======
   com.unity.ide.vscode@1.0.7
 >>>>>>> Animations
+=======
+  com.unity.ide.vscode@1.0.7
+>>>>>>> origin/feature/Level1.1
   com.unity.ide.rider@1.1.0
   com.unity.ugui@1.0.0
   com.unity.modules.androidjni@1.0.0
@@ -111,6 +119,7 @@ The following packages were updated:
   com.unity.package-manager-ui from version 2.1.2 to 2.2.0
   com.unity.textmeshpro from version 2.0.0 to 2.0.1
   com.unity.timeline from version 1.0.0 to 1.1.0
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 === Fri Oct 18 14:07:48 2019
@@ -123,3 +132,5 @@ The following packages were added:
   com.unity.xr.legacyinputhelpers@2.0.2
 =======
 >>>>>>> Animations
+=======
+>>>>>>> origin/feature/Level1.1

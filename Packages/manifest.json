@@ -8,11 +8,15 @@
     "com.unity.ext.nunit": "1.0.0",
     "com.unity.ide.rider": "1.1.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "com.unity.ide.vscode": "1.1.0",
     "com.unity.multiplayer-hlapi": "1.0.2",
 =======
     "com.unity.ide.vscode": "1.0.7",
 >>>>>>> Animations
+=======
+    "com.unity.ide.vscode": "1.0.7",
+>>>>>>> origin/feature/Level1.1
     "com.unity.package-manager-ui": "2.2.0",
     "com.unity.probuilder": "4.0.5",
     "com.unity.purchasing": "2.0.6",
@@ -21,9 +25,12 @@
     "com.unity.timeline": "1.1.0",
     "com.unity.ugui": "1.0.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "com.unity.xr.legacyinputhelpers": "2.0.2",
 =======
 >>>>>>> Animations
+=======
+>>>>>>> origin/feature/Level1.1
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",

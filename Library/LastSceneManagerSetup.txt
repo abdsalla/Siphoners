@@ -1,12 +1,16 @@
 sceneSetups:
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< Updated upstream
 >>>>>>> develop
+=======
+>>>>>>> origin/feature/Level1.1
 - path: Assets/Scenes/Level1/Level1.1.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 - path: Assets/Scenes/Level1/Level1.2.unity
@@ -20,3 +24,5 @@ sceneSetups:
   isSubScene: 0
 >>>>>>> Stashed changes
 >>>>>>> develop
+=======
+>>>>>>> origin/feature/Level1.1
