@@ -184,19 +184,22 @@ public class ControllerAI1 : MonoBehaviour
 
     void Patrol() //Patrol state for AI goes to set waypoints. 
     {
-        nav.SetDestination(moveSpots[randomSpot].position);
-
-        if (Vector3.Distance(transform.position, moveSpots[randomSpot].position) < 2.0f)
+        if (moveSpots.Length <= 0)
         {
-            if (waitTime <= 0)
-            {
-                randomSpot = Random.Range(0, moveSpots.Length);
+            nav.SetDestination(moveSpots[randomSpot].position);
 
-                waitTime = startWaitTime;
-            }
-            else
+            if (Vector3.Distance(transform.position, moveSpots[randomSpot].position) < 2.0f)
             {
-                waitTime -= Time.deltaTime;
+                if (waitTime <= 0)
+                {
+                    randomSpot = Random.Range(0, moveSpots.Length);
+
+                    waitTime = startWaitTime;
+                }
+                else
+                {
+                    waitTime -= Time.deltaTime;
+                }
             }
         }
     }
