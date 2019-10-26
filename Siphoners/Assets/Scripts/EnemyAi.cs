@@ -14,7 +14,7 @@ public class EnemyAi : MonoBehaviour
     public Transform player;
     public Transform tf;
 
-    public int health;
+    //public int health;
 
     //ai hearing
     Vector3 noisePosition;
