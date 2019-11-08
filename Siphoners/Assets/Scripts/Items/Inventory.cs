@@ -11,14 +11,12 @@ public class Inventory : MonoBehaviour
     public Item testItem;
     public GameObject inventoryMenu;
 
-    // Start is called before the first frame update
     void Start()
     {
         items = new Item[MAX_INVENTORY];
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.I) && inventoryMenu.activeSelf == false)
@@ -46,6 +44,11 @@ public class Inventory : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public void UseItem()
+    {
+
     }
 
 }

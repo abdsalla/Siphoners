@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -34,6 +35,11 @@ public class InventoryManager : MonoBehaviour
 
         if(onItemChangedCallback != null)
             onItemChangedCallback.Invoke();
+    }
+
+    public void Use (Item item)
+    {
+        
     }
 
     public void Remove (Item item)
