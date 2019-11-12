@@ -9,9 +9,18 @@ public class Item : ScriptableObject
     //Variables
     public string name;
     public string description;
-    public int price;
+    public int amount;
+    public int value;
     public enum ItemType { Default, Consumable, Weapon, Ammunition, Key}
     public ItemType type = ItemType.Default;
     public GameObject body;
     public Sprite icon;
+
+
+    public abstract OnUseEffect();
+
+
+
+
+
 }
