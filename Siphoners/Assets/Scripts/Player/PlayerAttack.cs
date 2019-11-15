@@ -9,7 +9,11 @@ public class PlayerAttack : MonoBehaviour
     //public GameObject enemyRef;
     public int playerDamage;
     //public float chargeAttackValue;
-    public int attackTime;
+    public float attackTime = 1.5f;
+
+    public float nextAttack;
+
+    public Animator anim;
 
     private ControllerAI enemy;
 
@@ -20,15 +24,23 @@ public class PlayerAttack : MonoBehaviour
     void Awake()
     {
         energyRef = GetComponent<Energy>();
+        
+    }
+
+    void Start()
+    {
+        anim = GetComponent<Animator>();
     }
 
     // If you press down K, then it calls the Attack function.
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.K) && Time.time > nextAttack)
         {
             Debug.Log("Pressed K to attack");
             Attack();
+            anim.Play("Melee");
+            nextAttack = Time.time + attackTime;
         }
     }
 
