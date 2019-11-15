@@ -11,8 +11,8 @@ public class EnemyAi : MonoBehaviour
     public float losRadius = 45f;
 
     //temp
-    public Transform player;
-    public Transform tf;
+    Transform player;
+    Transform tf;
 
     //public int health;
 
@@ -29,7 +29,7 @@ public class EnemyAi : MonoBehaviour
     public Transform[] moveSpots;
     private int randomSpot;
 
-    public NavMeshAgent Agent;
+    NavMeshAgent Agent;
 
     public float startWaitTime = 1f;
     public float distToPlayer = 5.0f;
@@ -42,7 +42,7 @@ public class EnemyAi : MonoBehaviour
 
     private float waitTime;
 
-    public Animator anim;
+    Animator anim;
     private GameManager instance;
     private Vector3 input;
 
@@ -188,6 +188,7 @@ public class EnemyAi : MonoBehaviour
             Debug.Log(distance);
             if(distance < 30)
             {
+                transform.LookAt(player.position);
                 Agent.SetDestination(PlayerMovement.playerPos);
             }
             

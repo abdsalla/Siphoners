@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: f6bcffa3967b610429b17720a9e8f86c
 ModelImporter:
-  serializedVersion: 25
+  serializedVersion: 26
   internalIDToNameTable:
   - first:
       74: -203655887218126122
@@ -19,12 +19,12 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     rigImportErrors: 
-    rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Bone length in
-      copied configuration does not match position in animation file:\n\t'mixamorig:LeftUpLeg'
-      : position error = 49.402180 mm\n\t'mixamorig:LeftLeg' : position error = 315.264038
-      mm\n\t'mixamorig:LeftFoot' : position error = 414.598938 mm\n\t'mixamorig:RightUpLeg'
-      : position error = 50.375652 mm\n\t'mixamorig:RightLeg' : position error = 314.641174
-      mm\n\t'mixamorig:RightFoot' : position error = 416.692108 mm\n"
+    rigImportWarnings: "Avatar Rig Configuration mis-match. Bone length in configuration
+      does not match position in animation file:\n\t'mixamorig:LeftUpLeg' : position
+      error = 49.402180 mm\n\t'mixamorig:LeftLeg' : position error = 315.264038 mm\n\t'mixamorig:LeftFoot'
+      : position error = 414.598938 mm\n\t'mixamorig:RightUpLeg' : position error
+      = 50.375652 mm\n\t'mixamorig:RightLeg' : position error = 314.641174 mm\n\t'mixamorig:RightFoot'
+      : position error = 416.692108 mm\n"
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -47,7 +47,7 @@ ModelImporter:
       lastFrame: 730
       wrapMode: 0
       orientationOffsetY: 0
-      level: 0
+      level: -0.8
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
@@ -75,6 +75,7 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
