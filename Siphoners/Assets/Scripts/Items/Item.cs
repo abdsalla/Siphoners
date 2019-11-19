@@ -1,26 +1,25 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using System.Runtime.Remoting.Messaging;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
-public class Item : ScriptableObject
+public class Item : BaseItem 
 {
-    //Variables
-    public string name;
-    public string description;
-    public int amount;
-    public int value;
-    public enum ItemType { Default, Consumable, Weapon, Ammunition, Key}
-    public ItemType type = ItemType.Default;
-    public GameObject body;
-    public Sprite icon;
-
-
-    public abstract OnUseEffect();
-
-
-
-
-
+    public override void OnUseEffect()
+    {
+        switch (type)
+        {
+            case ItemType.Weapon:
+                break;
+            case ItemType.Ammunition:
+                break;
+            case ItemType.Consumable:
+                break;
+            case ItemType.Key:
+                break;
+        }
+    }
 }

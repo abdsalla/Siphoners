@@ -1,8 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Analytics;
+using UnityEngine.Events;
 
 public class Inventory : MonoBehaviour
 {
@@ -14,7 +17,6 @@ public class Inventory : MonoBehaviour
     void Start()
     {
         items = new Item[MAX_INVENTORY];
-
     }
 
     void Update()
@@ -29,6 +31,8 @@ public class Inventory : MonoBehaviour
             inventoryMenu.SetActive(false);
             inventoryMenu.transform.Find("Inventory").gameObject.SetActive(true);
         }
+        
+        inventoryMenu.GetComponentInChildren<Button>().onClick.AddListener(UseItem);  
     }
 
     public void AddItem()
@@ -45,10 +49,11 @@ public class Inventory : MonoBehaviour
             }
         }
     }
-
+ 
     public void UseItem()
     {
-
+        Item itemToUse;
+        itemToUse = testItem;
+        itemToUse.OnUseEffect();
     }
-
 }
