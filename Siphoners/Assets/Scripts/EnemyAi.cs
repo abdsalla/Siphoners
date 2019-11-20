@@ -32,13 +32,20 @@ public class EnemyAi : MonoBehaviour
     NavMeshAgent Agent;
 
     public float startWaitTime = 1f;
-    public float distToPlayer = 5.0f;
+    public float distToPlayer = 2.0f;
 
 
 
     //chase
     public float chaseRadius = 20f;
     public float facePlayerFactor = 20f;
+
+    // Attack Variables
+    public int damage;
+    public float attackSpeed = 2.2f;
+    private float nextAttack;
+    public GameObject attackBox;
+    public Transform attackPoint;
 
     private float waitTime;
 
@@ -71,11 +78,13 @@ public class EnemyAi : MonoBehaviour
             {
                 Patrol();
                 NoiseCheck();
+                CheckLOS();
             }
             else if (aiHeardPlayer == true && playerIsInLOS == false)
             {
                 canSpin = true;
                 GoToNoisePosition();
+                CheckLOS();
 
             }
             else if (playerIsInLOS == true)
@@ -141,8 +150,9 @@ public class EnemyAi : MonoBehaviour
         if (angle < fieldofViewAngle * 0.5f)
         {
             RaycastHit hit;
+            Debug.DrawRay(attackPoint.transform.position, direction.normalized, Color.red, 2);
 
-            if (Physics.Raycast(transform.position, direction.normalized, out hit, losRadius))
+            if (Physics.Raycast(attackPoint.transform.position, direction.normalized, out hit, losRadius))
             {
                 if (hit.collider.tag == "Player")
                 {
@@ -182,16 +192,17 @@ public class EnemyAi : MonoBehaviour
     void ChasePlayer() //chase the playe if in line of sight.
     {
         float distance = Vector3.Distance(PlayerMovement.playerPos, transform.position);
-
         if (distance <= chaseRadius && distance > distToPlayer)
         {
-            Debug.Log(distance);
             if(distance < 30)
             {
-                transform.LookAt(player.position);
+                transform.LookAt(PlayerMovement.playerPos);
                 Agent.SetDestination(PlayerMovement.playerPos);
             }
             
+        } else if (distance <= chaseRadius && distance < distToPlayer)
+        {
+            Attack();
         }
 
     }
@@ -213,7 +224,18 @@ public class EnemyAi : MonoBehaviour
         tf.rotation = Quaternion.RotateTowards(tf.rotation, lookRotation, Time.deltaTime);
     }
 
+    public void Attack()
+    {
+        if(Time.time > nextAttack)
+        {
+            Debug.Log("Attempting to instantiate");
+            Instantiate(attackBox, attackPoint);
+            anim.Play("ZombieAttack");
+            nextAttack = Time.time + attackSpeed;
+        }
+    }
 
+    /*
     private void OnCollisionEnter(Collision collision)
     {
         //simple temp kill mechanic 
@@ -223,4 +245,5 @@ public class EnemyAi : MonoBehaviour
             //Destroy(player.gameObject);
         }
     }
+    */
 }

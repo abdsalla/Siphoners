@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3299366518150999750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3382868904109043009}
+  m_Layer: 0
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3382868904109043009
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3299366518150999750}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.433, z: 0.257}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3948077762328172309}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3948077762328172304
 GameObject:
   m_ObjectHideFlags: 0
@@ -18,7 +48,7 @@ GameObject:
   - component: {fileID: 4649617234340895803}
   m_Layer: 0
   m_Name: Zombie 1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,6 +65,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6329223848178905142}
+  - {fileID: 3382868904109043009}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -156,18 +187,19 @@ MonoBehaviour:
   playerIsInLOS: 0
   fieldofViewAngle: 160
   losRadius: 45
-  player: {fileID: 0}
-  tf: {fileID: 0}
   noiseTravelDistance: 50
   spinspeed: 3
   spinTime: 3
   moveSpots: []
-  Agent: {fileID: 0}
   startWaitTime: 1
   distToPlayer: 5
   chaseRadius: 20
   facePlayerFactor: 20
-  anim: {fileID: 0}
+  damage: 1
+  attackSpeed: 2.2
+  attackBox: {fileID: 8394827946176815850, guid: 59ea228ad1052d241b8a959fdef9e517,
+    type: 3}
+  attackPoint: {fileID: 3382868904109043009}
 --- !u!114 &4649617234340895803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,6 +286,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: be539a60198938244bb6c846218598b0, type: 2}
+    - target: {fileID: -6057140222963153312, guid: 0a2434bc3e8d58943963e9d65b64758f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -768879239539349595, guid: 0a2434bc3e8d58943963e9d65b64758f,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

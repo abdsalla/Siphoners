@@ -325,7 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 403ac524ac842cb4995b3102c6d6fb9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5
+  maxHealth: 10
   currentHealth: 0
 --- !u!1 &2077514572255270955
 GameObject:
@@ -7568,16 +7568,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: rigged_plagoo_doc
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 1d670cb5fcdaf0e4ab6e2bcc08623a9e,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 041089118f2f19c40a77f51411335fef, type: 2}
-    - target: {fileID: -6057140222963153312, guid: 1d670cb5fcdaf0e4ab6e2bcc08623a9e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 1d670cb5fcdaf0e4ab6e2bcc08623a9e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7631,6 +7621,16 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 1d670cb5fcdaf0e4ab6e2bcc08623a9e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 1d670cb5fcdaf0e4ab6e2bcc08623a9e,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 041089118f2f19c40a77f51411335fef, type: 2}
+    - target: {fileID: -6057140222963153312, guid: 1d670cb5fcdaf0e4ab6e2bcc08623a9e,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
