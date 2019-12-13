@@ -19,8 +19,8 @@ public class Lantern : MonoBehaviour
     void OnEnable()
     {
     lightComp = lightGameObject.GetComponent<Light>();
-    lightComp.type = LightType.Spot;
-    lightComp.lightmapBakeType = LightmapBakeType.Realtime;
+    //lightComp.type = LightType.Spot;
+    //lightComp.lightmapBakeType = LightmapBakeType.Realtime;
     energyRef = playerReference.GetComponent<Energy>();
     lightParticle = lightGameObject.GetComponent<ParticleSystem>();
     var lights = lightParticle.lights;

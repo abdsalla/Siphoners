@@ -48,6 +48,7 @@ public class UnityUV : MonoBehaviour, IUVSensor
             {
                 // Get Sensor value
                 UVValue = uvSensor.Call<int>("get_ADC_Val");
+                uvSensor.Call("LEDTestBlink");
 
                 // Reset timer
                 nextUVCallTime = Time.time + delayTime;

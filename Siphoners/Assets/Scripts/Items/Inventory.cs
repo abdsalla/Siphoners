@@ -1,8 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Analytics;
+using UnityEngine.Events;
 
 public class Inventory : MonoBehaviour
 {
@@ -11,14 +14,11 @@ public class Inventory : MonoBehaviour
     public Item testItem;
     public GameObject inventoryMenu;
 
-    // Start is called before the first frame update
     void Start()
     {
         items = new Item[MAX_INVENTORY];
-
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.I) && inventoryMenu.activeSelf == false)
@@ -31,6 +31,8 @@ public class Inventory : MonoBehaviour
             inventoryMenu.SetActive(false);
             inventoryMenu.transform.Find("Inventory").gameObject.SetActive(true);
         }
+        
+        inventoryMenu.GetComponentInChildren<Button>().onClick.AddListener(UseItem);  
     }
 
     public void AddItem()
@@ -47,5 +49,11 @@ public class Inventory : MonoBehaviour
             }
         }
     }
-
+ 
+    public void UseItem()
+    {
+        Item itemToUse;
+        itemToUse = testItem;
+        itemToUse.OnUseEffect();
+    }
 }

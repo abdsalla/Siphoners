@@ -8,7 +8,6 @@ public class InventoryUI : MonoBehaviour
 
     InventorySlot[] slots;
 
-    // Start is called before the first frame update
     void Start()
     {
         inventory = InventoryManager.instance;
@@ -17,19 +16,13 @@ public class InventoryUI : MonoBehaviour
         slots = itemsParent.GetComponentsInChildren<InventorySlot>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void UpdateUI()
     {
         for(int i = 0; i < slots.Length; i++)
         {
             if(i < inventory.items.Count)
             {
-                slots[i].AddItem(inventory.items[i]);
+                slots[i].DisplayItem(inventory.items[i]);
             } else
             {
                 // Eventual Clear Function

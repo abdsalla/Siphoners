@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10a9b472beddf7243bfe7f0bcfbec117, type: 3}
   m_Name: Lantern
   m_EditorClassIdentifier: 
-  name: Lantern
+  name: Hand Lantern
   description: 
-  price: 0
   type: 2
-  body: {fileID: 1283385834302101647, guid: 3c785964dab23c5458654e79dd745a5a, type: 3}
+  amount: 1
+  value: 0
+  body: {fileID: -927199367670048503, guid: ccd8f418f0505644485bbd3ce1ce2528, type: 3}
+  icon: {fileID: 21300000, guid: a8cd4f1d2ac86e4449a90c2d91cfadd6, type: 3}

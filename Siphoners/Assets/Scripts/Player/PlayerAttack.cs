@@ -6,14 +6,12 @@ public class PlayerAttack : MonoBehaviour
 {
     private Energy energyRef;
 
-    //public GameObject enemyRef;
     public int playerDamage;
-    //public float chargeAttackValue;
     public int attackTime;
 
     private ControllerAI enemy;
 
-    public GameObject attackBox;
+    public Item weapon;
 
     public Transform attackPoint;
 
@@ -32,13 +30,10 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
-    // When called, it instaniates an attack box in front of the player.
+    // When called, it instantiates an attack box in front of the player.
     void Attack()
     {
-
-        energyRef.currentEnergy -= 10f;
-
-        Instantiate(attackBox, attackPoint);
-
+        energyRef.currentEnergy -= playerDamage;
+        Instantiate(weapon.body, attackPoint);
     }
 }
