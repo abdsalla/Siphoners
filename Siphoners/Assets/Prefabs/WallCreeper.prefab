@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8118002729433040781}
   m_Layer: 0
   m_Name: WallCreeper
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,7 +114,6 @@ MonoBehaviour:
   baseDamage: 10
   targetDistance: 0
   sightRadius: 20
-  anim: {fileID: 0}
 --- !u!114 &8118002729433040782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,6 +130,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   startWaitTime: 1
+  health: 0
   inWall: 0
   isCrying: 0
   wallTouch: {fileID: 8118002729433040768}

@@ -41,16 +41,17 @@ public class CameraFollow : MonoBehaviour
             return;
         }
 
+        
         // compute position
         if (offsetPositionSpace == Space.Self)
         {
-            transform.position = target.TransformPoint(offsetPosition);
+            transform.position = target.TransformPoint(offsetPosition.x,offsetPosition.y,0);
         }
         else
         {
             transform.position = offsetPosition;
         }
-
+        
         // compute rotation
         if (lookAt)
         {

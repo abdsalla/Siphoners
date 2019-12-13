@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 7642354450683162823}
   - component: {fileID: 7425097829966581428}
   - component: {fileID: 8986561028145503344}
+  - component: {fileID: 2431093896199259487}
   m_Layer: 0
   m_Name: WolfBoy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,11 +128,8 @@ MonoBehaviour:
   tf: {fileID: 0}
   turnSpeed: 0
   hp: 30
-  zombieDamage: 10
+  baseDamage: 10
   targetDistance: 0
-  playerSpawn: {fileID: 0}
-  player: {fileID: 0}
-  anim: {fileID: 0}
   sightRadius: 20
 --- !u!114 &8986561028145503344
 MonoBehaviour:
@@ -146,6 +144,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1678988104559221485}
+--- !u!114 &2431093896199259487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7642354450683162820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 403ac524ac842cb4995b3102c6d6fb9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 20
+  currentHealth: 0
 --- !u!1 &7642354451439060162
 GameObject:
   m_ObjectHideFlags: 0
